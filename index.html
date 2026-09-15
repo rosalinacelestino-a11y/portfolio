@@ -272,6 +272,93 @@ footer{border-top:1px solid var(--rule);padding:1.8rem 0 3rem;display:flex;justi
 margin-top:2rem;font-size:.89rem;color:var(--ink-2);max-width:64ch;}
 .notice b{color:var(--ink);} .notice ul{margin:.6rem 0 0;padding-left:1.1rem;}
 .notice li{margin-bottom:.25rem;}
+/* CASE STUDY BLOECKE */
+.case-lead{max-width:72ch;margin:1.9rem 0 0;font-size:1.02rem;line-height:1.65;color:var(--ink-2);}
+.case-lead strong{color:var(--ink);font-weight:600;}
+.case-lead a{color:var(--oxblood);text-underline-offset:3px;}
+.cs-grid{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:1.9rem;}
+@media (min-width:820px){.cs-grid{grid-template-columns:repeat(2,1fr);}}
+.cs-box{background:var(--bone);padding:clamp(1.15rem,2.9vw,1.75rem);}
+.cs-h{margin:0 0 .65rem;font-family:var(--f-mono);font-weight:700;font-size:9.5px;
+letter-spacing:.19em;text-transform:uppercase;color:var(--magenta);}
+.cs-box p{margin:0;color:var(--ink-2);font-size:.95rem;line-height:1.63;}
+.cs-box p strong{color:var(--ink);font-weight:600;}
+.cs-box a{color:var(--oxblood);text-underline-offset:3px;}
+.pos-sub{max-width:52ch;margin:1.1rem 0 0;color:var(--ink-2);font-size:1rem;line-height:1.65;}
+.cv-single{max-width:760px;}
+a.crow{text-decoration:none;color:inherit;transition:color .18s;}
+a.crow:hover .crow-v,a.crow:focus-visible .crow-v{color:var(--magenta);}
+.linkbar{margin-top:1.8rem;}
+.linkbar .label{display:block;margin-bottom:.1rem;}
+.linkbar .factbar{margin-top:.5rem;}
+.mediahead{margin:2rem 0 .9rem;display:block;}
+.pass-p{margin:0 0 1.05rem;max-width:62ch;color:var(--ink-2);font-size:1.01rem;line-height:1.68;}
+.pass-p:last-child{margin-bottom:0;}
+.pass-lead{font-family:var(--f-display);font-style:italic;font-weight:500;color:var(--ink);
+font-size:clamp(1.12rem,3.2vw,1.6rem);line-height:1.38;max-width:26ch;margin:.9rem 0 1.3rem;}
+/* HERO OPENING LINE + ROLLEN */
+.hero-line{font-family:var(--f-display);font-style:italic;font-weight:500;color:var(--ink);
+font-size:clamp(1.15rem,3.4vw,2.05rem);line-height:1.28;max-width:32ch;margin:clamp(1.3rem,3.4vw,2rem) 0 0;}
+.hero-roles{display:flex;flex-wrap:wrap;gap:.45rem .9rem;margin:1.15rem 0 0;}
+.hero-roles span{font-family:var(--f-mono);font-size:10px;letter-spacing:.17em;
+text-transform:uppercase;color:var(--magenta);}
+.hero-roles span+span::before{content:"·";margin-right:.9rem;color:var(--rule);}
+/* POSITIONING + BELEG */
+.pos{font-family:var(--f-display);font-weight:500;color:var(--ink);
+font-size:clamp(1.08rem,2.9vw,1.5rem);line-height:1.42;max-width:38ch;margin:clamp(1.6rem,3.6vw,2.4rem) 0 0;}
+.pos b{font-weight:700;color:var(--magenta);font-style:normal;}
+.proof{margin:1.5rem 0 0;padding-top:1rem;border-top:1px solid var(--rule);
+max-width:64ch;color:var(--ink-2);font-size:.92rem;}
+.proof .label{display:block;margin-bottom:.45rem;}
+/* SKILLS */
+.skills{margin-top:clamp(1.8rem,4vw,2.6rem);}
+.sk-groups{display:grid;gap:clamp(1.5rem,3.4vw,2.4rem);}
+@media (min-width:760px){.sk-groups{grid-template-columns:repeat(2,1fr);}}
+.tools{margin:clamp(1.6rem,3.4vw,2.2rem) 0 0;padding-top:1rem;border-top:1px solid var(--rule);
+color:var(--ink-2);font-size:.92rem;line-height:1.7;max-width:72ch;}
+.tools .label{display:block;margin-bottom:.45rem;}
+.softwrap{margin-top:clamp(1.6rem,3.4vw,2.2rem);}
+.soft{display:grid;gap:.4rem;margin-top:.55rem;}
+@media (min-width:760px){.soft{grid-template-columns:repeat(2,1fr);gap:.4rem 2rem;}}
+.sk-h{margin:0 0 .3rem;font-family:var(--f-mono);font-size:9.5px;letter-spacing:.19em;
+text-transform:uppercase;color:var(--magenta);font-weight:700;}
+.sk-list{display:grid;border-top:1px solid var(--rule);}
+.sk-row{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;
+padding:.62rem 0;border-bottom:1px solid var(--rule);}
+.sk-row b{font-weight:600;font-size:.95rem;color:var(--ink);}
+.sk-lvl{flex:0 0 auto;font-family:var(--f-mono);font-size:9px;letter-spacing:.13em;
+text-transform:uppercase;color:var(--ink-2);display:inline-flex;align-items:center;gap:.45rem;}
+.dots{display:inline-flex;gap:3px;}
+.dots i{width:6px;height:6px;border-radius:50%;border:1px solid var(--rule);display:block;}
+.dots i.on{background:var(--magenta);border-color:var(--magenta);}
+.soft span{font-family:var(--f-display);font-weight:500;font-size:clamp(1rem,2.4vw,1.16rem);
+line-height:1.35;color:var(--ink);padding:.42rem 0;border-bottom:1px solid var(--rule);}
+/* WERDEGANG */
+.cv{display:grid;gap:clamp(1.8rem,4vw,2.8rem);}
+@media (min-width:880px){.cv{grid-template-columns:1.25fr 1fr;}}
+.cv-list{display:grid;border-top:1px solid var(--rule);}
+.cv-row{display:flex;justify-content:space-between;gap:1.2rem;align-items:baseline;
+padding:.75rem 0;border-bottom:1px solid var(--rule);}
+.cv-what{min-width:0;}
+.cv-what b{display:block;font-weight:600;font-size:.97rem;color:var(--ink);line-height:1.3;}
+.cv-what span{display:block;margin-top:.12rem;font-size:.88rem;color:var(--ink-2);}
+.cv-when{flex:0 0 auto;font-family:var(--f-mono);font-size:9.5px;letter-spacing:.13em;
+text-transform:uppercase;color:var(--ink-2);white-space:nowrap;}
+.status{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--f-mono);
+font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--magenta);
+border:1px solid var(--magenta);padding:.3rem .5rem;line-height:1;}
+.status i{width:6px;height:6px;border-radius:50%;background:var(--magenta);display:block;}
+.cs-box--wip{background:repeating-linear-gradient(135deg,transparent 0 9px,
+color-mix(in srgb,var(--magenta) 7%,transparent) 9px 10px),var(--bone);}
+.wip-tag{display:inline-block;font-family:var(--f-mono);font-size:8.5px;letter-spacing:.16em;
+text-transform:uppercase;background:var(--magenta);color:#FFF;padding:.26rem .45rem;
+line-height:1;margin-bottom:.6rem;}
+@media (max-width:700px){
+  .am-media{aspect-ratio:4/5;}
+  .am-who{padding-bottom:40%;font-size:clamp(1.5rem,8vw,2.4rem);}
+  .am-list li{font-size:.66rem;letter-spacing:.12em;}
+  .am-list{gap:.22rem;}
+}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
 </style>
 </head>
@@ -280,15 +367,16 @@ margin-top:2rem;font-size:.89rem;color:var(--ink-2);max-width:64ch;}
 <header class="hero">
   <div class="hero-top"><span class="label">Portfolio</span><span class="label">2026</span></div>
   <h1 class="wordmark" id="wordmark">Rosalina Patricia Celestino</h1>
+  <p class="hero-line">Ich übersetze Ästhetik in Content, den Leute sich merken.</p>
+  <div class="hero-roles"><span>Social Media / Project Management</span><span>Content Production</span><span>Creative Direction in Progress</span></div>
   <div class="contact-btns">
     <a class="cbtn cbtn--hot" href="mailto:rosalina.celestino@gmx.de"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>rosalina.celestino@gmx.de</a>
     <a class="cbtn" href="tel:+491737044492"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>+49 173 7044492</a>
-    <a class="cbtn cbtn--ghost" href="https://www.tiktok.com/@itsrosalinacelestino">@itsrosalinacelestino</a>
   </div>
 </header>
 
 <section id="about">
-  <div class="sec-head"><span class="label">01 — About</span></div>
+  <div class="sec-head"><span class="label">01 · About &amp; Skills</span></div>
   <div class="aboutme">
     <div class="am-media">
       <video src="media/00_about_who-am-i.mp4" poster="media/00_about_who-am-i_vorschau.jpg" autoplay muted loop playsinline preload="none"></video>
@@ -297,107 +385,123 @@ margin-top:2rem;font-size:.89rem;color:var(--ink-2);max-width:64ch;}
     </div>
     <p class="am-who">&ldquo;WHO AM I&rdquo;</p>
     <ul class="am-list">
-      <li>Social Media Manager</li>
-      <li>Micro Content &amp; UGC Creator</li>
-      <li>Fashion Enthusiast</li>
       <li>Aesthetic Storyteller</li>
-      <li>Gen Z (28 y/o)</li>
+      <li>Fashion, Beauty &amp; Culture Enthusiast</li>
+      <li>Gen Z</li>
       <li>German Based</li>
     </ul>
+  </div>
+
+  <p class="pos">Ich helfe Marken und Künstler:innen aus Mode, Beauty und Subkultur, <b>nicht nur gesehen, sondern erinnert zu werden.</b></p>
+
+  <p class="pos-sub">Ich weiß, wie ein Set läuft, wie ein Kanal wächst und wie man Projekte finalisiert. Weil ich alle drei selbst seit über sechs Jahren mache.</p>
+
+  <p class="pos-sub">Als Creative Directorin möchte ich mehr Projekte aus der Kultur umsetzen. Mit Brands und Persönlichkeiten, die eine eigene Handschrift haben.</p>
+
+  <p class="proof"><span class="label">Gearbeitet mit</span>SICKY Magazine · Sven Barucha · Vision Ekstase · Lehmann Club Stuttgart · Atelier Schänzlin · Gude Zeit Kollektiv</p>
+
+  <div class="skills">
+    <p class="sk-h">Hard Skills</p>
+    <div class="sk-groups">
+      <div class="sk-list">
+        <div class="sk-row"><b>Social Media Management</b><span class="sk-lvl">Advanced<span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="sk-row"><b>Redaktionsplanung &amp; Content-Strategie</b><span class="sk-lvl">Advanced<span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="sk-row"><b>Content Creation, Video &amp; Foto</b><span class="sk-lvl">Advanced<span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="sk-row"><b>Video Editing</b><span class="sk-lvl">Advanced<span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="sk-row"><b>Community Management</b><span class="sk-lvl">Advanced<span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="sk-row"><b>Visual Storytelling</b><span class="sk-lvl">Advanced<span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+      </div>
+      <div class="sk-list">
+        <div class="sk-row"><b>Projekt- &amp; Programmmanagement</b><span class="sk-lvl">Advanced<span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="sk-row"><b>Performance-Analyse &amp; KPI-Tracking</b><span class="sk-lvl">Advanced<span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="sk-row"><b>Creative Direction</b><span class="sk-lvl">Intermediate<span class="dots"><i class="on"></i><i class="on"></i><i></i></span></span></div>
+        <div class="sk-row"><b>Set- &amp; Produktionsassistenz</b><span class="sk-lvl">Intermediate<span class="dots"><i class="on"></i><i class="on"></i><i></i></span></span></div>
+        <div class="sk-row"><b>Moderation, On-Camera</b><span class="sk-lvl">Intermediate<span class="dots"><i class="on"></i><i class="on"></i><i></i></span></span></div>
+        <div class="sk-row"><b>Grafik &amp; Brand Identity</b><span class="sk-lvl">Intermediate<span class="dots"><i class="on"></i><i class="on"></i><i></i></span></span></div>
+      </div>
+    </div>
+
+    <p class="tools"><span class="label">Tools</span>CapCut · Premiere Pro · Final Cut Pro · Lightroom · Canva · Meta Ads · TikTok Ads · Jira · Salesforce · HubSpot · Power BI · GitHub &amp; Vercel</p>
+
+    <p class="tools"><span class="label">Soft Skills</span>Organisation &amp; Ownership · Kommunikation &amp; Networking · Belastbarkeit &amp; Hands-on-Mentalität · Ästhetisches Gespür &amp; Detailblick</p>
   </div>
 </section>
 
 <section id="arbeiten">
-  <div class="sec-head"><span class="label">02 — Kreative Projekte</span><h2 class="sec-title">Ausgewählte Arbeiten</h2>
-  <details class="story intro"><summary><span class="tz">Kreativität in etwas Sichtbares zu verwandeln, war immer schon ein Teil von mir.</span><span class="tmore">mehr<i></i></span></summary>
-    <div class="story-body">
-    <p>Lange habe ich das nur für mich getan. In den vergangenen Monaten durfte ich es in verschiedenen kreativen Projekten tun — und dabei von Menschen lernen, die in dieser Branche längst einen Namen haben. Das hier ist, was daraus geworden ist.</p>
-    </div></details></div>
+  <div class="sec-head"><span class="label">02 · Kreative Projekte</span>
+    <h2 class="sec-title">Case Studies</h2>
+  </div>
 
   <article class="case" id="sicky">
     <div class="case-head"><div class="case-meta"><span class="label">Juli 2026 · Stuttgart</span></div>
-      <h3 class="case-title">„Hardware" — Editorial für das SICKY Magazine</h3></div>
+      <h3 class="case-title">„Hardware“ · Editorial Shoot · Assistance &amp; BTS</h3></div>
     <div class="duo">
       <figure class="laptop"><div class="laptop-screen">
         <video src="media/sicky_01_strecke-online.mp4" poster="media/sicky_01_strecke-online_vorschau.jpg" autoplay muted loop playsinline preload="none"></video></div>
         <div class="laptop-base"></div><figcaption>Die Strecke auf sickymag.com</figcaption></figure>
       <figure class="artcard"><img src="media/sicky_04_credits.jpg" alt="Titel und Credits der Strecke Hardware im SICKY Magazine">
-        <figcaption style="text-align:left;padding:.7rem .8rem;background:var(--bone);">Editorial-Beschreibung &amp; Credits — SICKY Magazine</figcaption></figure>
+        <figcaption style="text-align:left;padding:.7rem .8rem;background:var(--bone);">Editorial-Beschreibung &amp; Credits · SICKY Magazine</figcaption></figure>
     </div>
-    <details class="story"><summary><span class="tz">Beauty Editorial Shoot</span><span class="tmore">mehr<i></i></span></summary>
-      <div class="story-body">
-      <p><a href="https://svenbarucha.com" class="ilink">Sven Barucha</a> gestaltet aus Stuttgart heraus Bild — Beauty- und Kosmetikfotografie, Art Direction, Konzeption. <a href="https://www.instagram.com/sbarucha/" class="ilink">@sbarucha</a></p>
-      <p>„Hardware" entstand als freier Editorial Shoot: neun Looks rund um skulpturale Nail Art von Tanja Gravina, kombiniert mit Statement-Pieces von Bottega Veneta, Dior und Gucci. Die Strecke wurde im Juli im SICKY Magazine veröffentlicht.</p>
-      <p>Als <strong>Shooting-Assistenz</strong> war ich für die Zuarbeit bei Fotografie, Styling und Hair &amp; Make-up sowie für die Umsetzung des Moodboards mitverantwortlich. Zusätzlich lag der <strong>Behind-the-Scenes-Content</strong> bei mir — Konzept, Dreh und Schnitt, genutzt für Social-Media-Posts.</p>
-    </div></details>
-    <p class="label" style="margin-top:2rem;">Behind the Scenes — eigene Produktion und Schnitt</p>
+    <p class="label mediahead">Behind the Scenes · eigene Produktion und Schnitt</p>
     <div class="strip"><figure class="phone"><div class="phone-body"><video src="media/sicky_02_bts-vs-final.mp4" poster="media/sicky_02_bts-vs-final_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption>BTS vs. Final</figcaption></figure><figure class="phone"><div class="phone-body"><video src="media/sicky_03_am-set.mp4" poster="media/sicky_03_am-set_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption>Am Set</figcaption></figure></div>
-    <p class="label" style="margin-top:1.5rem;">Aus der veröffentlichten Strecke</p>
+    <p class="case-lead"><a class="ilink" href="https://svenbarucha.com">Sven Barucha</a> macht Beauty- und Kosmetikfotografie in Stuttgart und arbeitet regelmäßig für Magazine. Für „Hardware“ entstanden neun Looks rund um skulpturale Nail Art von Tanja Gravina, kombiniert mit Statement-Pieces von Bottega Veneta, Dior und Gucci.</p>
+    <div class="cs-grid"><div class="cs-box"><h4 class="cs-h">Objective</h4><p>Aus dem Shoot mehr Content ziehen als die finalen Bilder, um seine Kanäle über die Strecke hinaus zu bespielen und Insights aus dem Shoot für Community Building zu zeigen.</p></div><div class="cs-box"><h4 class="cs-h">Approach</h4><p>Das fertige Editorial zeigt das Ergebnis, nicht das Handwerk. Behind the Scenes verkauft den Prozess und lässt sich in mehr Formate übersetzen als ein einzelnes Bild.</p></div><div class="cs-box"><h4 class="cs-h">Execution</h4><p>Shooting-Assistenz am Set für Fotografie und Styling sowie für die Umsetzung des Moodboards. Dazu Konzept, Dreh und Schnitt von sechs BTS-Assets. Schnitt in CapCut.</p></div><div class="cs-box"><h4 class="cs-h">Metrics &amp; Impact</h4><p>Zwei Assets ausgespielt, das erste als Collab mit <span class="stat">4.812</span> Aufrufen, 164 Likes und 18 Speicherungen. Sven Barucha hat das Material auf seinem eigenen Kanal veröffentlicht, den er als professionelles Portfolio gegenüber Kunden führt. Inzwischen verwendet er einzelne Szenen aus dem BTS-Material auch in eigenen kurzen Reels weiter. Die Strecke selbst erschien im Juli im SICKY Magazine.</p></div></div>
+    <div class="keys"><span class="key">Set Assistance</span><span class="key">BTS Content</span><span class="key">Content Production</span><span class="key">Video Editing</span></div>
+    <p class="label mediahead">Aus der veröffentlichten Strecke</p>
     <div class="finals">
       <figure><img src="media/sicky_05_final.jpg" alt="Hand mit skulpturaler Nail Art an einer schwarzen Tasche"></figure>
       <figure><img src="media/sicky_06_final.jpg" alt="Beauty-Portrait mit langen burgunderfarbenen Nägeln"></figure>
       <figure><img src="media/sicky_07_final.jpg" alt="Rückansicht mit nassem Haar und Metallringen"></figure>
     </div>
-    <div class="keys"><span class="key">Editorial Production</span><span class="key">Content Production</span><span class="key">BTS Content</span><span class="key">Set Assistance</span><span class="key">Beauty &amp; Fashion</span><span class="key">Video Editing</span></div>
     <p class="brands"><span class="label">Marken im Shooting</span>Saint Laurent · Bottega Veneta · Dior · Givenchy · Rabanne · Gucci · Etro · Róhe · Simkhai · 2310 Studio · Louisa Ballou</p>
+    <div class="linkbar"><span class="label">Verlinkungen</span><dl class="factbar"><div><dt>Fotografie</dt><dd><a class="ilink" href="https://www.instagram.com/sbarucha/">@sbarucha</a></dd></div><div><dt>Magazin</dt><dd><a class="ilink" href="https://sickymag.com">sickymag.com</a></dd></div></dl></div>
+  </article>
+
+  <article class="case" id="ve-kurzfilm">
+    <div class="case-head"><div class="case-meta"><span class="label">September 2026 · Stuttgart</span>
+      <span class="status"><i></i>In Produktion</span></div>
+      <h3 class="case-title">Vision Ekstase Shortfilm Editorial · Creative Direction Associate &amp; BTS</h3></div>
+    <div class="strip">
+      <figure class="phone"><div class="phone-body"><div class="screen"><span class="ph-tag">folgt</span></div></div><figcaption>Kurzfilm</figcaption></figure>
+      <figure class="phone"><div class="phone-body"><div class="screen"><span class="ph-tag">folgt</span></div></div><figcaption>BTS-Reel</figcaption></figure>
+      <figure class="phone"><div class="phone-body"><div class="screen"><span class="ph-tag">folgt</span></div></div><figcaption>Camcorder-Ästhetik</figcaption></figure>
+    </div>
+    <p class="case-lead"><a class="ilink" href="https://www.instagram.com/visionekstase/">@visionekstase</a> produziert seit Jahren eigene Kurzfilme und Clips für die eigenen Kanäle. Diese dienen als Promotion für Veranstaltungen sowie für Community Building.</p>
+    <div class="cs-grid"><div class="cs-box"><h4 class="cs-h">Objective</h4><p>Ein Moodboard allein ist nicht drehbar. Am Set braucht es Szenen, die für Fotografin und Videograf eindeutig definiert sind, damit nichts vergessen wird.</p></div><div class="cs-box"><h4 class="cs-h">Approach</h4><p>Die Creative Direction übernehme ich gemeinsam mit der Fotografin Ocean. Das Moodboard wird in ein Narrativ übersetzt, eine warme und eine kühle Figur, ein Portal zwischen zwei Welten, konsequente Perspektivwechsel. Der BTS-Content bekommt eine eigene Haltung: Alles entsteht vor Ort, mit Requisiten, Make-up und echten Menschen, ohne KI. Aufgenommen auf altem Camcorder, damit die Home-Video-Anmutung zur körperlichen, sehr nahen Bildsprache passt.</p></div><div class="cs-box"><h4 class="cs-h">Execution</h4><p>Teilnahme an der Szenenbesprechung, daraus ein Szenenplan mit Einstellungen, Kameraperspektiven und Übergängen. Dazu ein eigener BTS-Plan. Am Drehtag Creative Direction am Set, parallel BTS-Aufnahmen auf Camcorder und Bodycam. Danach Schnitt der Reels für Vision Ekstase und für den eigenen Kanal.</p></div><div class="cs-box cs-box--wip"><h4 class="cs-h">Metrics &amp; Impact</h4><span class="wip-tag">Platzhalter</span><p>To be produced.</p></div></div>
+    <div class="keys"><span class="key">Creative Direction</span><span class="key">Szenenplanung</span><span class="key">BTS Content</span><span class="key">Video Editing</span></div>
+    <div class="linkbar"><span class="label">Verlinkungen</span><dl class="factbar"><div><dt>Kanal</dt><dd><a class="ilink" href="https://www.instagram.com/visionekstase/">@visionekstase</a></dd></div><div><dt>Fotografie &amp; Creative Direction</dt><dd><a class="ilink" href="https://www.instagram.com/oceanphotography.ve/">@oceanphotography.ve</a></dd></div></dl></div>
   </article>
 
   <article class="case" id="vision-ekstase">
-    <div class="case-head"><div class="case-meta"><span class="label">15.08.2026 · Höhenpark Killesberg</span></div>
-      <h3 class="case-title">Vision Ekstase Open Air — Social Media Management</h3></div>
+    <div class="case-head"><div class="case-meta"><span class="label">August 2026 · Stuttgart</span></div>
+      <h3 class="case-title">Vision Ekstase Open Air · Social Media Lead</h3></div>
     <div class="brandbar"><img class="bb-sym" src="media/vision-ekstase_symbol.png" alt="Vision Ekstase Symbol">
       <span class="bb-rule"></span><img class="bb-logo" src="media/vision-ekstase_logo.png" alt="Vision Ekstase Logo"></div>
     <div class="strip">
       <figure class="phone"><div class="phone-body"><video src="media/vision-ekstase_01_promo.mp4" poster="media/vision-ekstase_01_promo_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption>Promo Video</figcaption></figure><figure class="phone"><div class="phone-body"><video src="media/vision-ekstase_02.mp4" poster="media/vision-ekstase_02_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div></figure><figure class="phone"><div class="phone-body"><video src="media/vision-ekstase_03.mp4" poster="media/vision-ekstase_03_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div></figure><figure class="phone"><div class="phone-body"><video src="media/vision-ekstase_04.mp4" poster="media/vision-ekstase_04_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div></figure><figure class="phone"><div class="phone-body shot-body"><img src="media/vision-ekstase_07_nachher.jpg" alt=""></div><figcaption></figcaption></figure>
     </div>
-    <details class="story"><summary><span class="tz">(Live-)Story-Content und Moderation</span><span class="tmore">mehr<i></i></span></summary>
-      <div class="story-body">
-      <p>Vision Ekstase ist eine Veranstaltungsreihe aus dem Umfeld des Lehmann Clubs. Einmal im Jahr verlässt sie den Club und wird zum Open-Air-Dayevent mit bis zu <span class="stat">1.000</span> Besucher:innen — 2026 im Höhenpark Killesberg.</p>
-      <p>Angefragt wurde ich für das Social-Media-Team des Open Airs. Im Vorlauf: Konzept, Skript und Dreh für den <strong>Promo-Shoot</strong>, die <strong>Redaktionsplanung</strong> für den Eventtag, eng abgestimmt mit der Veranstalterin, und das <strong>Story-Design</strong> — Typografie, Logoführung, Farbsystem.</p>
-      <p>Am Eventtag lag die Verantwortung für den <strong>Story-Content</strong> bei mir: aufnehmen, moderieren, schneiden und posten, während das Event läuft. Dazu Material, mit dem der Kanal weiterarbeitet — für kommende Open Airs und die Formate dazwischen.</p>
-      <p class="story-out"><span class="stat">20–30</span> Stories mit je <span class="stat">2,5–5k</span> Views · <span class="stat">~100</span> neue Follower an einem einzigen Tag.</p>
-    </div></details>
-    <dl class="factbar"><div><dt>Kanal</dt><dd>@visionekstase · 13,4k Follower</dd></div></dl>
-    <div class="keys"><span class="key">Social Media Lead</span><span class="key">Redaktionsplanung</span><span class="key">Content Scheduling</span><span class="key">Story-Design</span><span class="key">Live Content</span><span class="key">Video Editing</span><span class="key">Event Communication</span><span class="key">Performance-Auswertung</span></div>
+    <p class="case-lead"><a class="ilink" href="https://www.instagram.com/visionekstase/">@visionekstase</a> ist eine etablierte Veranstaltungsreihe aus dem Umfeld des <a class="ilink" href="https://www.instagram.com/lehmannclubstuttgart/">@lehmannclubstuttgart</a> und zählt zu den festen Größen für Subkultur- und Clubevents in Stuttgart. Einmal im Jahr hostet Vision Ekstase ein Open-Air-Dayevent, das dieses Jahr im Höhenpark Killesberg stattfand, mit rund <strong>1.000 Besucher:innen</strong>.</p>
+    <div class="cs-grid"><div class="cs-box"><h4 class="cs-h">Objective</h4><p>Angefragt für das Social-Media-Team des Open Airs, um Content für Reichweite und Followerwachstum zu drehen. Dazu ein Materialarchiv für künftige Formate.</p></div><div class="cs-box"><h4 class="cs-h">Approach</h4><p>Das Open-Air-Feeling visuell im Story-Content rüberbringen, um das Event selbst als Produkt zu vermarkten. Live-Ausspielung während der Veranstaltung statt vorproduzierter Ankündigung, um einen FOMO-Effekt zu erzeugen. Story-Design vorab festgelegt, Story-Inhalte am Eventtag in Eigenverantwortung.</p></div><div class="cs-box"><h4 class="cs-h">Execution</h4><p>Promo-Shoot von Konzept bis Aufnahme. Redaktionsplan für den Eventtag mit der Veranstalterin erstellt sowie Story-Design festgelegt. Am Tag selbst zehn Stunden durchgehend vor der Kamera moderiert, geschnitten und Live-Content ausgespielt. Schnitt in CapCut, Grafik in Canva.</p></div><div class="cs-box"><h4 class="cs-h">Metrics &amp; Impact</h4><p>Promo-Reel <span class="stat">50.728</span> Aufrufe, 790 Likes, 36 Reposts. Über 20 Live-Stories mit je 2.900 bis 5.300 Aufrufen. <span class="stat">384</span> neue Follower im Eventzeitraum. Erneute Anfrage für eine Videodreh-Produktion im September.</p></div></div>
+    <div class="keys"><span class="key">Social Media Lead</span><span class="key">Live Content</span><span class="key">Redaktionsplanung</span><span class="key">Moderation</span></div>
+    <div class="linkbar"><span class="label">Verlinkungen</span><dl class="factbar"><div><dt>Kanal</dt><dd><a class="ilink" href="https://www.instagram.com/visionekstase/">@visionekstase</a></dd></div><div><dt>Club</dt><dd><a class="ilink" href="https://www.instagram.com/lehmannclubstuttgart/">@lehmannclubstuttgart</a></dd></div></dl></div>
   </article>
 
-  
-
-  <article class="case">
+  <article class="case" id="schaenzlin">
     <div class="case-head"><div class="case-meta"><span class="label">laufend seit April 2026</span></div>
-      <h3 class="case-title">Atelier Schänzlin — Social Media Management</h3></div>
+      <h3 class="case-title">Atelier Schänzlin · Social Media Management</h3></div>
     <div class="strip">
       <figure class="phone"><div class="phone-body"><video src="media/schaenzlin_01_live-painting.mp4" poster="media/schaenzlin_01_live-painting_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption>Live Painting</figcaption></figure>
       <figure class="phone"><div class="phone-body"><video src="media/schaenzlin_02_artist-portrait.mp4" poster="media/schaenzlin_02_artist-portrait_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption>Artist Portrait</figcaption></figure>
     </div>
-    <details class="story"><summary><span class="tz">Schnitt, Redaktionsplanung und Publishing — laufend</span><span class="tmore">mehr<i></i></span></summary>
-      <div class="story-body">
-      <p>Lukas Schänzlin, alias <strong>Atelier Schänzlin</strong>, ist Pop-Surrealism-Künstler aus Stuttgart und etabliert sich in der lokalen Subkulturszene — unter anderem als Live-Painter auf Events.</p>
-      <p>Ich <strong>unterstütze ihn im Social Media Management</strong> für seine beiden Kanäle, Instagram und TikTok, und übernehme darin den <strong>Schnitt</strong> von bestehendem und neu aufgenommenem Videomaterial sowie dessen Bearbeitung und Ausspielung. Dazu habe ich die <strong>Redaktionsplanung</strong> aufgesetzt, die für einen regelmäßigen Veröffentlichungsrhythmus sorgt — mit dem Ziel, Engagement und Community aufzubauen und seiner Kunst mehr Sichtbarkeit zu geben.</p>
-    </div></details>
-    <dl class="factbar"><div><dt>Instagram</dt><dd>@atelier.schaenzlin</dd></div><div><dt>TikTok</dt><dd>@schaenzlin.art</dd></div></dl>
-    <div class="keys"><span class="key">Social Media Management</span><span class="key">Artist Relations</span><span class="key">Redaktionsplanung</span><span class="key">Publishing</span><span class="key">Community Management</span><span class="key">Format Development</span><span class="key">Video Editing</span><span class="key">On-Camera</span></div>
+    <p class="case-lead"><a class="ilink" href="https://www.instagram.com/atelier.schaenzlin/">@atelier.schaenzlin</a> ist der Kanal von <strong>Lukas Schänzlin</strong>, Pop-Surrealism-Künstler aus Stuttgart, der sich in der lokalen Subkulturszene etabliert, unter anderem als Live-Painter auf Events.</p>
+    <div class="cs-grid"><div class="cs-box"><h4 class="cs-h">Objective</h4><p>Bei Übernahme der Kanäle im April: unregelmäßige Veröffentlichungen, ungenutztes Video- und Bildmaterial, das nie hochgeladen wurde, verfehlte Reichweitenziele und eine Auftragslage, die ihm durch die geringe Sichtbarkeit zu dünn war. Ziel: Sichtbarkeit aufbauen, aus der Anfragen für seine Kunst entstehen.</p></div><div class="cs-box"><h4 class="cs-h">Approach</h4><p>Ein noch unentdeckter Künstler braucht beides: Reichweite bei Fremden und eine Community, die bleibt. Dafür mehr dynamische Reels, Bildunterschriften, die zur Interaktion einladen, und ein verlässlicher Rhythmus. Dazu vorhandenes, nie genutztes Material zu Content entwickeln.</p></div><div class="cs-box"><h4 class="cs-h">Execution</h4><p>Laufender Contentplan seit April mit zwei Beiträgen pro Woche, dazu Story-Content. Schnitt und Bearbeitung von bestehendem und neu aufgenommenem Videomaterial, Redaktionsplanung und Publishing sämtlicher Beiträge auf Instagram und TikTok. CapCut und Canva.</p></div><div class="cs-box"><h4 class="cs-h">Metrics &amp; Impact</h4><p><span class="stat">50.742</span> Aufrufe in 90 Tagen, 51,9&nbsp;% davon von Nicht-Followern. Stärkster Beitrag <span class="stat">9.611</span> Aufrufe und 21 neue Follower. Zuletzt <span class="stat">8.774</span> Reichweite auf einen Bildbeitrag und 2.953 auf ein Reel. Das Mandat läuft seit April durchgehend weiter.</p></div></div>
+    <div class="keys"><span class="key">Social Media Management</span><span class="key">Redaktionsplanung</span><span class="key">Video Editing</span><span class="key">Publishing</span></div>
+    <div class="linkbar"><span class="label">Verlinkungen</span><dl class="factbar"><div><dt>Instagram</dt><dd><a class="ilink" href="https://www.instagram.com/atelier.schaenzlin/">@atelier.schaenzlin</a></dd></div><div><dt>TikTok</dt><dd><a class="ilink" href="https://www.tiktok.com/@schaenzlin.art">@schaenzlin.art</a></dd></div></dl></div>
   </article>
 
-  <article class="case" id="wheaty">
-    <div class="case-head"><div class="case-meta"><span class="label">April 2026</span></div>
-      <h3 class="case-title">Wheaty — On-Camera Talent</h3></div>
-    <div class="strip">
-      <figure class="phone"><div class="phone-body"><video src="media/wheaty_01_reel.mp4" poster="media/wheaty_01_reel_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption>Reel auf @wheaty_de</figcaption></figure>
-      <figure class="phone"><div class="phone-body shot-body"><img src="media/wheaty_04_screen.jpg" alt=""></div><figcaption></figcaption></figure>
-      <figure class="phone"><div class="phone-body shot-body"><img src="media/wheaty_03_set.jpg" alt=""></div><figcaption></figcaption></figure>
-    </div>
-    <details class="story"><summary><span class="tz">Video-Model für eine Social-Media-Kampagne</span><span class="tmore">mehr<i></i></span></summary>
-      <div class="story-body">
-      <p>Wheaty ist eine vegane Food-Marke aus Stuttgart. Für eine Gewinnspiel-Kampagne rund um Grillprodukte stand ich als <strong>Model vor der Kamera</strong>.</p>
-    </div></details>
-    <dl class="factbar"><div><dt>Kanal</dt><dd>@wheaty_de</dd></div></dl>
-    <div class="keys"><span class="key">Brand Content</span><span class="key">On-Camera Talent</span><span class="key">UGC</span><span class="key">Instagram Campaign</span></div>
-  </article>
-
-  <article class="case">
-    <div class="case-head"><div class="case-meta"><span class="label">seit September 2025</span></div>
-      <h3 class="case-title">Gude Zeit Kollektiv — Mitgründerin &amp; Community Building</h3></div>
+  <article class="case" id="gude-zeit">
+    <div class="case-head"><div class="case-meta"><span class="label">seit September 2025 · Stuttgart</span></div>
+      <h3 class="case-title">Gude Zeit Kollektiv · Mitgründerin &amp; Community Building</h3></div>
     <div class="brandbar">
       <img class="bb-mark" src="media/gude-zeit_02_logo.jpg" alt="Logo Gude Zeit Kollektiv">
       <span class="bb-rule"></span>
@@ -407,12 +511,10 @@ margin-top:2rem;font-size:.89rem;color:var(--ink-2);max-width:64ch;}
       <figure class="tile"><img src="media/gude-zeit_03_flyer.jpg" alt="Veranstaltungsflyer Trance am Tresen">
         <figcaption>Eventkommunikation</figcaption></figure>
     </div>
-    <details class="story"><summary><span class="tz">Ehrenamtliches Musikkollektiv aus der Stuttgarter Subkulturszene</span><span class="tmore">mehr<i></i></span></summary>
-      <div class="story-body">
-      <p>Gude Zeit ist ein <strong>Musikkollektiv</strong> aus Stuttgart, das ich mitgegründet habe. Seit 2025 veranstalten wir eigene Musikveranstaltungen und waren bei Events wie der <strong>Tanzdemo Stuttgart</strong> und der <strong>Langen Nacht der Museen</strong> vertreten.</p>
-      <p>Den Kanal haben wir <strong>im Team aufgebaut</strong>, betreut wird er bis heute von mehreren Personen. Für Reichweite und Wiedererkennbarkeit haben wir einen Instagram-Kanal aufgebaut. Mein Part liegt im <strong>Community Management und in der Redaktionsplanung</strong> — damit unsere Handschrift auch in der Kommunikation sichtbar wird, nicht nur im Line-up.</p>
-    </div></details>
-    <div class="keys"><span class="key">Community Building</span><span class="key">Community Management</span><span class="key">Kanalstrategie</span><span class="key">Redaktionsplanung</span><span class="key">Event Communication</span><span class="key">Kulturförderung</span></div>
+    <p class="case-lead"><a class="ilink" href="https://www.instagram.com/gudezeit.kollektiv/">@gudezeit.kollektiv</a> ist ein ehrenamtliches Musikkollektiv aus Stuttgart mit eigenen Veranstaltungsformaten. Neben selbst organisierten Veranstaltungsreihen Auftritte bei der <strong>Tanzdemo Stuttgart</strong> und der <strong>Langen Nacht der Museen</strong>.</p>
+    <div class="cs-grid"><div class="cs-box"><h4 class="cs-h">Objective</h4><p>Mit der Neugründung kam die Aufgabe, Reichweite und Aufmerksamkeit für die eigenen Veranstaltungen zu erzeugen. Dafür wurde nicht nur der Kanal von Grund auf aufgebaut, sondern zuerst eine eigene Brand Identity entwickelt: Symbol, Farben, Bildsprache. Ziel: Veranstaltungen füllen und die Haltung des Kollektivs sichtbar machen, ohne Werbebudget.</p></div><div class="cs-box"><h4 class="cs-h">Approach</h4><p>No-Budget-Veranstaltungen gewinnen Reichweite über Empfehlung und Weiterleitung, also über die kostenfreien Wege Instagram und WhatsApp. Die Ankündigungen sollen deshalb nicht nur auf die Veranstaltung aufmerksam machen, sondern die Werte des Kollektivs mittransportieren, mit festem visuellem Wiedererkennungswert.</p></div><div class="cs-box"><h4 class="cs-h">Execution</h4><p>Kanalaufbau im Team, laufend Community Management und Redaktionsplanung. Schnitt in CapCut, Grafiken und Brand Identity in Canva, dazu ein Canva-Template für ein durchgehend einheitliches Design.</p></div><div class="cs-box"><h4 class="cs-h">Metrics &amp; Impact</h4><p><span class="stat">957</span> Follower bei 35 Beiträgen, von Beginn an aufgebaut. Seit der ersten Party waren alle Veranstaltungen gut besucht, mehrfach mit Einlassstopp.</p></div></div>
+    <div class="keys"><span class="key">Community Building</span><span class="key">Brand Identity</span><span class="key">Eventkommunikation</span><span class="key">Kanalstrategie</span></div>
+    <div class="linkbar"><span class="label">Verlinkungen</span><dl class="factbar"><div><dt>Kanal</dt><dd><a class="ilink" href="https://www.instagram.com/gudezeit.kollektiv/">@gudezeit.kollektiv</a></dd></div></dl></div>
   </article>
 </section>
 
@@ -429,7 +531,8 @@ margin-top:2rem;font-size:.89rem;color:var(--ink-2);max-width:64ch;}
 <!-- ***** ANFANG VORLAGE *****
   <article class="case">
     <div class="case-head"><div class="case-meta"><span class="label">MONAT JAHR &middot; ORT</span></div>
-      <h3 class="case-title">PROJEKTNAME &mdash; MEINE ROLLE</h3></div>
+      <h3 class="case-title">PROJEKTNAME &mdash; WAS ES WAR &middot; MEINE ROLLE</h3></div>
+
     <div class="strip">
       <figure class="phone"><div class="phone-body">
         <video src="media/DEIN-VIDEO-1.mp4" autoplay muted loop playsinline preload="none"></video>
@@ -437,46 +540,77 @@ margin-top:2rem;font-size:.89rem;color:var(--ink-2);max-width:64ch;}
       <figure class="phone"><div class="phone-body">
         <video src="media/DEIN-VIDEO-2.mp4" autoplay muted loop playsinline preload="none"></video>
       </div></figure>
+      <figure class="phone"><div class="phone-body shot-body">
+        <img src="media/DEIN-BILD.jpg" alt="BESCHREIBUNG">
+      </div><figcaption>BILDUNTERSCHRIFT</figcaption></figure>
     </div>
-    <details class="story"><summary><span class="tz">KURZER TEASER, EIN SATZ</span><span class="tmore">mehr<i></i></span></summary>
-      <div class="story-body">
-      <p>ERSTER ABSATZ: worum ging es, wer war der Kunde.</p>
-      <p>ZWEITER ABSATZ: was hast du gemacht.</p>
-      </div></details>
+
+    <p class="case-lead">EINSTIEGSTEXT: wer war der Kunde, was war das Projekt.
+      Namen als Link: <a class="ilink" href="https://www.instagram.com/HANDLE/">@HANDLE</a></p>
+
+    <div class="cs-grid">
+      <div class="cs-box"><h4 class="cs-h">Objective</h4>
+        <p>Was war die Ausgangslage, was war das Ziel.</p></div>
+      <div class="cs-box"><h4 class="cs-h">Approach</h4>
+        <p>Welche Ueberlegung stand dahinter, welche Strategie.</p></div>
+      <div class="cs-box"><h4 class="cs-h">Execution</h4>
+        <p>Was hast du konkret gemacht, mit welchen Tools.</p></div>
+      <div class="cs-box"><h4 class="cs-h">Metrics &amp; Impact</h4>
+        <p>Zahlen und Ergebnis. Zahl hervorheben:
+          <span class="stat">12.345</span> Aufrufe.</p></div>
+    </div>
+
     <div class="keys"><span class="key">SCHLAGWORT</span><span class="key">SCHLAGWORT</span></div>
+
+    <p class="brands"><span class="label">Marken im Shooting</span>MARKE &middot; MARKE &middot; MARKE</p>
+
+    <div class="linkbar"><span class="label">Verlinkungen</span>
+      <dl class="factbar">
+        <div><dt>Instagram</dt><dd><a class="ilink" href="https://www.instagram.com/HANDLE/">@HANDLE</a></dd></div>
+        <div><dt>TikTok</dt><dd><a class="ilink" href="https://www.tiktok.com/@HANDLE">@HANDLE</a></dd></div>
+      </dl>
+    </div>
   </article>
 ***** ENDE VORLAGE ***** -->
 
 <section id="eigenes">
-  <div class="sec-head"><span class="label">03 — Eigener Kanal</span>
-    <h2 class="sec-title">@itsrosalinacelestino</h2>
-    <details class="story intro"><summary><span class="tz">Ein Selbstexperiment: eigener Kanal, eigene Regeln, eigene Fehler.</span><span class="tmore">mehr<i></i></span></summary>
-      <div class="story-body">
-      <p>Um meine Skills in Social Media, Datenanalyse, Brand- und Community Building zu verfeinern, nutze ich mich selbst als Experiment — um Social Media Management und Content Creation von innen zu verstehen.</p>
-      <p>Außerdem gibt es mir die Möglichkeit, meine eigene Social-Media-Präsenz und Ästhetik zu finden und auszuleben.</p>
-      </div></details></div>
+  <div class="sec-head"><span class="label">03 · Visual Diary</span>
+    <h2 class="sec-title">Visual Diary &amp; Content Creation</h2>
+  </div>
   <div class="strip">
-    <figure class="phone"><div class="phone-body"><video src="media/kanal_01_grwm.mp4" poster="media/kanal_01_grwm_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption>Get Ready With Me</figcaption></figure>
     <figure class="phone"><div class="phone-body"><video src="media/kanal_02_ootd.mp4" poster="media/kanal_02_ootd_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption>Outfit of the Day</figcaption></figure>
     <figure class="phone"><div class="phone-body"><video src="media/kanal_03_coffee.mp4" poster="media/kanal_03_coffee_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption>Coffee Routine</figcaption></figure>
-    <figure class="phone"><div class="phone-body"><video src="media/kanal_04_aesthetic.mp4" poster="media/kanal_04_aesthetic_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption>Aesthetic</figcaption></figure>
+    <figure class="phone"><div class="phone-body"><video src="media/kanal_04_aesthetic.mp4" poster="media/kanal_04_aesthetic_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption>Aesthetic Video</figcaption></figure>
+    <figure class="phone"><div class="phone-body"><video src="media/kanal_01_grwm.mp4" poster="media/kanal_01_grwm_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption>Get Ready With Me</figcaption></figure>
   </div>
+  <p class="case-lead"><a class="ilink" href="https://www.tiktok.com/@itsrosalinacelestino">@itsrosalinacelestino</a> ist mein eigener Kanal und mein visuelles Tagebuch: der Ort, an dem ich mein kreatives Outlet trainiere.</p>
+  <div class="cs-grid"><div class="cs-box"><h4 class="cs-h">Objective</h4><p>Social Media Management und Content Creation an eigenen visuellen Ideen erproben. Dazu die eigene Ästhetik verfeinern und verstehen, wie der TikTok-Algorithmus arbeitet.</p></div><div class="cs-box"><h4 class="cs-h">Approach</h4><p>Wer selbst postet, kann eigene Trendanalysen fahren. So trainiere ich nicht nur das visuelle Auge, sondern lerne, wie Reichweite auf der Plattform entsteht, und setze das in Arbeiten für andere ein.</p></div><div class="cs-box"><h4 class="cs-h">Execution</h4><p>Konzept, Dreh, Schnitt, Publishing, Performance-Analyse. CapCut und der TikTok-eigene Schnitt.</p></div><div class="cs-box"><h4 class="cs-h">Metrics &amp; Impact</h4><p><span class="stat">37.300</span> Zuschauer:innen in 28 Tagen, davon <span class="stat">35.900</span> neu. Stärkstes Video <span class="stat">29.300</span> Aufrufe bei 7.683 Likes, eine Like-Quote von 26&nbsp;%. Zuletzt ein Video mit <span class="stat">18.000</span> Aufrufen, 3.244 Likes, 374 Weiterleitungen und 553 Speicherungen. Das Publikum ist zu 86&nbsp;% weiblich und zu 87&nbsp;% unter 35.</p></div></div>
 </section>
 
 
+<section id="werdegang">
+  <div class="sec-head"><span class="label">04 · Werdegang</span>
+    <h2 class="sec-title">Ausbildung &amp; Werdegang</h2>
+  </div>
+  <div class="cv-single">
+    <div class="cv-list">
+      <div class="cv-row"><div class="cv-what"><b>B. A. Digital Business Management</b><span>Duale Hochschule Baden-Württemberg Stuttgart</span></div><span class="cv-when">2022 bis 2025</span></div>
+      <div class="cv-row"><div class="cv-what"><b>Programm- &amp; Projektmanagement</b><span>Mackevision / Accenture Song, Stuttgart</span></div><span class="cv-when">2019 bis 2025</span></div>
+      <div class="cv-row"><div class="cv-what"><b>Kauffrau für audiovisuelle Medien</b><span>Johann-Friedrich-von-Cotta-Schule, Stuttgart</span></div><span class="cv-when">2019 bis 2022</span></div>
+      <div class="cv-row"><div class="cv-what"><b>Praktikum Social Media &amp; Event Booking</b><span>Elipamanoke Club, Leipzig</span></div><span class="cv-when">2018 bis 2019</span></div>
+      <div class="cv-row"><div class="cv-what"><b>Abitur</b><span>Gymnasium Georgianum Hildburghausen</span></div><span class="cv-when">2016</span></div>
+    </div>
+  </div>
+</section>
+
 <div class="closing">
   <div class="band-in">
-    <span class="label">04 — Passion</span>
+    <span class="label">05 · Passion</span>
     <div class="pass-grid">
     <div class="pass-text">
-    <div class="story">
-      <p class="tz tz--static">Ich finde Ästhetik in den alltäglichsten Dingen — und liebe es, sie festzuhalten.</p>
-      <div class="story-body">
-      <p>Inspiration finde ich überall: in der Natur, in Mode, in Kunst, in Architektur. Meistens in den kleinen Dingen, an denen andere vorbeigehen.</p>
-      <p>Mich kreativ auszuleben treibt mich jeden Tag an. Ideen kommen schnell, weil ich mich schnell begeistere. Und seit ich dieses Jahr wieder zu meiner Kreativität gefunden habe, inspiriert mich auch meine eigene Arbeit. Ein Video bringt mich auf das nächste, ein Set auf die nächste Idee.</p>
-      <p>Deshalb macht mir die Arbeit an kreativen Projekten so viel Spaß. Und deshalb möchte ich in Zukunft noch viele weitere Ideen umsetzen — und dabei etwas schaffen, das meiner Generation und der Szene, in der ich zu Hause bin, wirklich etwas gibt.</p>
-      </div>
-    </div>
+      <p class="pass-lead">Ich finde Ästhetik und Inspiration selbst in den kleinsten Dingen.</p>
+      <p class="pass-p">Ob in der Natur, in Mode, in Kunst, in Architektur oder den Menschen um mich herum. Ich finde immer eine Möglichkeit, Dinge neu zu inszenieren.</p>
+      <p class="pass-p">Mich kreativ auszuleben treibt mich jeden Tag an, und genau deshalb macht mir die Arbeit an kreativen Projekten so viel Spaß. In Zukunft möchte ich noch viele weitere Ideen umsetzen und meiner Generation und der Szene damit einen Mehrwert geben.</p>
     </div>
     <figure class="mood">
       <div class="mood-body">
@@ -488,19 +622,17 @@ margin-top:2rem;font-size:.89rem;color:var(--ink-2);max-width:64ch;}
 </div>
 
 <section id="kontakt">
-  <div class="sec-head"><span class="label">05 — Kontakt</span></div>
-  <p class="contact-claim">Lass uns<br>zusammenarbeiten.</p>
+  <div class="sec-head"><span class="label">06 · Kontakt</span></div>
+  <p class="contact-claim">Let&rsquo;s work<br>together.</p>
   <div class="contact-btns" style="margin-bottom:2rem;">
     <a class="cbtn cbtn--hot" href="mailto:rosalina.celestino@gmx.de"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>rosalina.celestino@gmx.de</a>
     <a class="cbtn" href="tel:+491737044492"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>+49 173 7044492</a>
   </div>
   <div class="contact-rows">
-    <div class="crow"><span class="label">TikTok</span><span class="crow-v">@itsrosalinacelestino</span></div>
-    <div class="crow"><span class="label">Instagram</span><span class="crow-v">@itsrosalinacelestino</span></div>
+    <a class="crow" href="https://www.tiktok.com/@itsrosalinacelestino"><span class="label">TikTok</span><span class="crow-v">@itsrosalinacelestino</span></a>
+    <a class="crow" href="https://www.instagram.com/itsrosalinacelestino/"><span class="label">Instagram</span><span class="crow-v">@itsrosalinacelestino</span></a>
   </div>
-  
 </section>
-
 <footer><span class="label">Rosalina Patricia Celestino</span><span class="label">2026</span></footer>
 </div>
 
