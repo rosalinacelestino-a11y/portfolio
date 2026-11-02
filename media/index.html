@@ -1,0 +1,981 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portfolio — Social Media Management, Content Production, Community.">
+<meta name="author" content="Rosalina Patricia Celestino">
+<style>*{box-sizing:border-box}html,body{margin:0;padding:0}img,video{max-width:100%}</style>
+<title>Rosalina Patricia Celestino</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&family=Pinyon+Script&family=Space+Mono:wght@400;700&display=swap">
+<style>
+:root{--bone:#F5F1EA;--bone-2:#EBE4D8;--ink:#191313;--ink-2:#5F5550;--magenta:#E4157F;
+--oxblood:#6E1F28;--sage-deep:#6E7A5E;--pearl:#E4C4CC;--rule:#CFC5B4;
+--chrome-a:#F3E6EA;--chrome-b:#DCD4DE;--chrome-c:#EFE9E0;--on-sage:#F7F5EF;
+--f-script:"Pinyon Script","Snell Roundhand",cursive;
+--f-display:"Playfair Display","Iowan Old Style",Georgia,serif;
+--f-body:"Archivo","Helvetica Neue",Arial,sans-serif;
+--f-mono:"Space Mono","SFMono-Regular",Menlo,monospace;
+--maxw:1200px;--pad:clamp(1.15rem,4vw,3.5rem);}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bone:#17111A;--bone-2:#221A28;
+--ink:#F2EBE4;--ink-2:#AD9FA6;--magenta:#FF63B4;--oxblood:#E0798A;--sage-deep:#48533C;
+--pearl:#C79CAA;--rule:#3D3145;--chrome-a:#322639;--chrome-b:#241C2B;--chrome-c:#3A2D3F;--on-sage:#F2EFE6;}}
+:root[data-theme="dark"]{--bone:#17111A;--bone-2:#221A28;--ink:#F2EBE4;--ink-2:#AD9FA6;
+--magenta:#FF63B4;--oxblood:#E0798A;--sage-deep:#48533C;--pearl:#C79CAA;--rule:#3D3145;
+--chrome-a:#322639;--chrome-b:#241C2B;--chrome-c:#3A2D3F;--on-sage:#F2EFE6;}
+*{box-sizing:border-box;}
+html{overflow-x:hidden;overflow-x:clip;}
+body{margin:0;background:var(--bone);color:var(--ink);font-family:var(--f-body);font-size:17px;
+line-height:1.58;-webkit-font-smoothing:antialiased;overflow-x:clip;}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:999;opacity:.5;
+mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E");}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body::before{mix-blend-mode:screen;opacity:.2;}}
+:root[data-theme="dark"] body::before{mix-blend-mode:screen;opacity:.2;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);}
+.label{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--ink-2);}
+h1,h2,h3{margin:0;text-wrap:balance;font-weight:700;}
+a{color:inherit;} a:focus-visible,button:focus-visible{outline:2px solid var(--magenta);outline-offset:3px;}
+.ilink{color:var(--oxblood);text-underline-offset:3px;}
+.check{font-family:var(--f-mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;
+color:var(--magenta);display:block;margin-top:.5rem;}
+.todo{color:var(--magenta);font-family:var(--f-mono);font-size:.75rem;letter-spacing:.07em;text-transform:uppercase;}
+.stat{color:var(--oxblood);font-weight:700;font-variant-numeric:tabular-nums;}
+.aboutme{position:relative;border:1px solid var(--rule);overflow:hidden;background:var(--bone-2);}
+.am-media{position:relative;aspect-ratio:3/2;min-height:240px;}
+.am-media video,.am-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.am-scrim{position:absolute;inset:0;pointer-events:none;
+background:linear-gradient(to top,rgba(20,14,18,.78) 0%,rgba(20,14,18,.20) 42%,rgba(20,14,18,.34) 100%);}
+.am-who{position:absolute;inset:0;margin:0;display:grid;place-items:center;pointer-events:none;
+padding-bottom:16%;
+font-family:var(--f-script);font-weight:400;color:#F7F2EC;
+font-size:clamp(1.1rem,5.4vw,3.2rem);letter-spacing:.01em;line-height:1;
+text-shadow:0 2px 24px rgba(20,14,18,.55);}
+.am-list{position:absolute;left:0;bottom:0;margin:0;list-style:none;pointer-events:none;
+padding:clamp(.85rem,2.4vw,1.7rem) clamp(1rem,3vw,2.2rem);
+display:flex;flex-direction:column;align-items:flex-start;gap:.28rem;}
+.am-list li{font-family:var(--f-mono);font-weight:700;color:#FF4FA8;
+font-size:clamp(.6rem,1.45vw,.82rem);letter-spacing:.15em;text-transform:uppercase;line-height:1.3;
+text-shadow:0 1px 10px rgba(20,14,18,.7);}
+.am-media .snd{right:12px;bottom:12px;width:34px;height:34px;z-index:5;}
+.am-media .snd svg{width:17px;height:17px;}
+.am-list{pointer-events:none;}
+.ownstat{margin:0 0 1.4rem;font-family:var(--f-display);font-style:italic;
+font-size:clamp(1.1rem,2.8vw,1.5rem);color:var(--ink);}
+/* HERO */
+.hero{position:relative;padding:clamp(2rem,5vw,3.4rem) 0 clamp(1.6rem,3.4vw,2.4rem);}
+.hero::after{content:"";position:absolute;top:-22%;right:-18%;width:min(52vw,520px);aspect-ratio:1;
+border-radius:50%;background:radial-gradient(circle at 32% 28%,var(--chrome-a),var(--chrome-b) 46%,var(--chrome-c) 72%,transparent 78%);
+filter:blur(8px);opacity:.8;z-index:0;}
+.hero>*{position:relative;z-index:1;}
+.hero-top{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-bottom:clamp(1.2rem,3vw,2rem);}
+.wordmark{font-family:var(--f-script);font-weight:400;color:var(--ink);margin:0;
+white-space:nowrap;line-height:1.05;font-size:clamp(1.4rem,7.6vw,6.2rem);
+display:block;max-width:100%;}
+.role{font-family:var(--f-display);font-weight:500;font-style:italic;font-size:clamp(1.25rem,3.2vw,2rem);
+line-height:1.25;max-width:26ch;margin:clamp(1.4rem,3.5vw,2rem) 0 0;}
+.role-sub{max-width:48ch;margin:1rem 0 0;color:var(--ink-2);font-size:.97rem;}
+.contact-btns{display:flex;flex-wrap:nowrap;gap:.5rem;margin-top:1.8rem;}
+.cbtn{white-space:nowrap;flex:0 1 auto;min-width:0;}
+@media (max-width:600px){
+  .contact-btns .cbtn{font-size:9px;letter-spacing:.05em;padding:.7rem .75rem;gap:.42rem;}
+  .contact-btns .cbtn svg{width:13px;height:13px;}
+  .hero .cbtn--ghost{display:none;}
+}
+.cbtn{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--f-mono);font-size:11.5px;
+letter-spacing:.09em;text-decoration:none;padding:.8rem 1.2rem;border:1px solid var(--ink);
+color:var(--ink);background:transparent;transition:background .18s,color .18s;}
+.cbtn svg{width:15px;height:15px;flex:0 0 auto;}
+.cbtn:hover,.cbtn:focus-visible{background:var(--ink);color:var(--bone);}
+.cbtn--hot{border-color:var(--magenta);color:var(--magenta);}
+.cbtn--hot:hover,.cbtn--hot:focus-visible{background:var(--magenta);color:#FFF;}
+.cbtn--ghost{border-color:var(--rule);color:var(--ink-2);}
+.cbtn--ghost:hover,.cbtn--ghost:focus-visible{background:var(--ink);color:var(--bone);border-color:var(--ink);}
+/* SECTIONS */
+section{padding:clamp(1.9rem,4.2vw,3.2rem) 0;border-top:1px solid var(--rule);}
+.claim{font-family:var(--f-display);font-style:italic;font-weight:500;color:var(--ink);
+font-size:clamp(1.25rem,4.4vw,2.15rem);line-height:1.2;letter-spacing:-.01em;margin:.9rem 0 .2rem;
+max-width:22ch;}
+.sec-head{display:grid;gap:.45rem;margin-bottom:clamp(1rem,2.2vw,1.5rem);}
+.sec-title{font-family:var(--f-display);font-weight:900;font-size:clamp(1.75rem,5vw,3.1rem);
+line-height:1.06;letter-spacing:-.015em;}
+.sec-intro{color:var(--ink-2);max-width:54ch;margin:.5rem 0 0;}
+/* MEDIA */
+.strip{display:flex;gap:.85rem;overflow-x:auto;overscroll-behavior-x:contain;
+padding:.25rem var(--pad) .8rem;margin:0 calc(var(--pad)*-1);scroll-snap-type:x proximity;align-items:flex-start;}
+.strip::-webkit-scrollbar{height:6px;} .strip::-webkit-scrollbar-thumb{background:var(--rule);border-radius:3px;}
+.strip-wrap{position:relative;}
+.snav{position:absolute;top:44%;transform:translateY(-50%);z-index:6;width:40px;height:40px;
+border-radius:50%;border:1px solid var(--ink);background:var(--bone);color:var(--ink);
+display:none;place-items:center;cursor:pointer;padding:0;
+box-shadow:0 2px 14px rgba(20,14,18,.16);transition:background .18s,color .18s,opacity .18s;}
+.strip-wrap.has-nav .snav{display:grid;}
+.snav svg{width:19px;height:19px;}
+.snav--prev{left:2px;} .snav--next{right:2px;}
+.snav:disabled{opacity:.22;cursor:default;box-shadow:none;}
+.snav:not(:disabled):hover,.snav:not(:disabled):focus-visible{background:var(--magenta);
+border-color:var(--magenta);color:#FFF;}
+figure{margin:0;}
+.phone{flex:0 0 auto;width:clamp(150px,42vw,252px);scroll-snap-align:start;}
+.phone-body{aspect-ratio:9/16;border:7px solid var(--ink);border-radius:24px;background:var(--bone-2);
+position:relative;overflow:hidden;box-shadow:0 16px 34px -20px rgba(25,19,19,.5);}
+.phone-body::before{content:"";position:absolute;top:6px;left:50%;transform:translateX(-50%);
+width:52px;height:13px;background:var(--ink);border-radius:0 0 9px 9px;z-index:3;}
+.phone-body video,.shot-body img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;}
+.snd{position:absolute;right:7px;bottom:7px;z-index:4;width:30px;height:30px;border-radius:50%;
+border:0;padding:0;display:grid;place-items:center;cursor:pointer;
+background:rgba(25,19,19,.62);color:#fff;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);}
+.snd svg{width:15px;height:15px;}
+.snd .i-on{display:none;}
+.snd[data-on="1"]{background:var(--magenta);}
+.snd[data-on="1"] .i-off{display:none;} .snd[data-on="1"] .i-on{display:block;}
+.laptop{flex:0 0 auto;width:min(100%,540px);}
+.laptop-screen{aspect-ratio:16/10;border:7px solid var(--ink);border-radius:9px 9px 2px 2px;
+background:var(--bone-2);overflow:hidden;position:relative;}
+.laptop-screen video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.laptop-base{height:10px;background:var(--ink);border-radius:0 0 8px 8px;margin:0 -4%;width:108%;}
+.screen{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+gap:.5rem;text-align:center;padding:.9rem;background:repeating-linear-gradient(135deg,transparent 0 10px,
+color-mix(in srgb,var(--pearl) 38%,transparent) 10px 11px),linear-gradient(160deg,var(--chrome-a),var(--chrome-b) 55%,var(--chrome-c));}
+.ph-tag{font-family:var(--f-mono);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;
+background:var(--magenta);color:#FFF;padding:.3rem .5rem;line-height:1;}
+.ph-what{font-family:var(--f-display);font-style:italic;font-size:.88rem;line-height:1.28;color:var(--ink);max-width:20ch;}
+.ph-spec{font-family:var(--f-mono);font-size:8.5px;letter-spacing:.09em;color:var(--ink-2);line-height:1.5;text-transform:uppercase;}
+figcaption{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;
+color:var(--ink-2);text-align:center;margin-top:.7rem;}
+/* duo: laptop + credits */
+.duo{display:grid;gap:1.1rem;align-items:start;margin-top:.8rem;}
+@media (min-width:900px){.duo{grid-template-columns:1.18fr 1fr;align-items:start;}}
+.duo-main,.duo-side{display:grid;gap:.5rem;align-content:start;}
+.duo-h{margin:.7rem 0 .1rem;display:block;}
+.kampagne{display:grid;gap:.7rem;margin-top:.8rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));}
+.kampagne figure{border:1px solid var(--rule);overflow:hidden;background:var(--bone-2);}
+.kampagne img{display:block;width:100%;height:auto;}
+.kampagne figcaption{margin:0;padding:.5rem .6rem;background:var(--bone);text-align:left;}
+.prozess{display:grid;gap:.7rem;margin-top:.8rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+.prozess figure{border:1px solid var(--rule);overflow:hidden;background:var(--bone-2);}
+.prozess figcaption{margin:0;padding:.5rem .6rem;background:var(--bone);text-align:left;}
+.prozess img{display:block;width:100%;height:auto;}
+.finals3{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;}
+.finals3 figure{border:1px solid var(--rule);overflow:hidden;background:var(--bone-2);}
+.finals3 img{display:block;width:100%;height:auto;}
+.duo-bts{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;}
+.duo-bts .phone{width:100%;}
+.artcard{border:1px solid var(--rule);background:#000;overflow:hidden;}
+.artcard img{display:block;width:100%;height:auto;}
+/* finals */
+.finals{display:grid;gap:.8rem;margin-top:1.1rem;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));}
+.finals figure{border:1px solid var(--rule);overflow:hidden;background:var(--bone-2);}
+.finals img{display:block;width:100%;height:auto;}
+/* groups */
+.grp{padding-top:1.75rem;} .grp+.grp{border-top:1px solid var(--rule);margin-top:.5rem;}
+.grp-head{display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap;margin-bottom:.35rem;}
+.grp-title{font-family:var(--f-display);font-weight:700;font-size:clamp(1.15rem,2.8vw,1.55rem);}
+.grp-note{color:var(--ink-2);font-size:.92rem;max-width:56ch;margin:0 0 .5rem;}
+/* case */
+.case{padding:clamp(1.5rem,3vw,2.1rem) 0;border-bottom:1px solid var(--rule);}
+.case:last-of-type{border-bottom:0;padding-bottom:0;}
+.case-head{display:grid;gap:.5rem;margin-bottom:1.4rem;}
+.case-meta{display:flex;gap:.9rem;flex-wrap:wrap;align-items:baseline;}
+.case-title{font-family:var(--f-display);font-weight:900;font-size:clamp(1.5rem,4vw,2.4rem);
+line-height:1.08;letter-spacing:-.012em;}
+.brandbar{display:flex;align-items:center;gap:1.1rem;margin:0 0 1rem;}
+.bb-sym{height:42px;width:auto;flex:0 0 auto;} .bb-logo{height:50px;width:auto;flex:0 0 auto;}
+.bb-rule{flex:1 1 auto;height:1px;background:var(--rule);}
+.bb-mark{height:62px;width:auto;flex:0 0 auto;border-radius:4px;}
+.tile{flex:0 0 auto;width:clamp(150px,42vw,252px);}
+.tile img{display:block;width:100%;height:auto;border:1px solid var(--rule);}
+.story{max-width:64ch;margin-top:1.7rem;border-top:1px solid var(--rule);}
+.story>summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;
+gap:1.2rem;justify-content:space-between;padding:.9rem 0;}
+.story>summary::-webkit-details-marker{display:none;}
+.story>summary:hover .tz{color:var(--magenta);}
+.tz{font-family:var(--f-display);font-style:italic;font-weight:500;color:var(--ink);
+font-size:clamp(1.02rem,2.7vw,1.24rem);line-height:1.4;transition:color .18s;}
+.tmore{flex:0 0 auto;display:inline-flex;align-items:center;gap:.5rem;
+font-family:var(--f-mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--magenta);}
+.tmore i{display:block;width:7px;height:7px;border-right:1.6px solid currentColor;
+border-bottom:1.6px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .22s;}
+.story[open]>summary .tmore i{transform:translateY(1px) rotate(-135deg);}
+.story[open]>summary .tz{color:var(--ink-2);}
+.story-body{padding:.1rem 0 1.2rem;}
+.story.intro{margin-top:1.1rem;max-width:62ch;}
+.story p{margin:0 0 .95rem;color:var(--ink-2);} .story p:last-child{margin-bottom:0;}
+.story strong{color:var(--ink);font-weight:600;}
+.story-out{color:var(--ink);font-family:var(--f-display);font-style:italic;font-size:1.12rem;
+line-height:1.45;padding-top:.85rem;border-top:1px solid var(--rule);margin-top:1.2rem;}
+.factbar{display:grid;gap:0;margin:1.75rem 0 0;padding:0;border-top:1px solid var(--rule);}
+@media (min-width:760px){.factbar{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));column-gap:2rem;}}
+.factbar>div{padding:.8rem 0;border-bottom:1px solid var(--rule);}
+.factbar dt{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
+color:var(--ink-2);margin-bottom:.25rem;}
+.factbar dd{margin:0;font-size:.95rem;color:var(--ink);}
+.keys{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.95rem;}
+.key{font-family:var(--f-mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+border:1px solid var(--rule);color:var(--ink-2);padding:.35rem .6rem;line-height:1;}
+.brands{margin-top:1.15rem;font-size:.9rem;color:var(--ink-2);padding-top:.9rem;border-top:1px solid var(--rule);}
+.brands .label{display:block;margin-bottom:.4rem;}
+/* about / services */
+.about{display:grid;gap:clamp(1.75rem,4.5vw,3rem);}
+@media (min-width:880px){.about{grid-template-columns:1fr 1fr;}}
+.idlist{list-style:none;margin:0;padding:0;}
+.idlist li{font-family:var(--f-display);font-weight:700;font-size:clamp(1.05rem,2.5vw,1.45rem);
+line-height:1.32;padding:.3rem 0;border-bottom:1px solid var(--rule);}
+.idlist li:first-child{color:var(--magenta);}
+.services{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);}
+@media (min-width:760px){.services{grid-template-columns:repeat(2,1fr);}}
+.svc{background:var(--bone);padding:clamp(1.15rem,2.8vw,1.7rem);}
+.svc h3{font-family:var(--f-display);font-size:1.18rem;margin-bottom:.45rem;}
+.svc p{margin:0;color:var(--ink-2);font-size:.92rem;}
+.band{background:var(--sage-deep);color:var(--on-sage);margin:0 calc(50% - 50vw);padding:clamp(2.5rem,6vw,4.5rem) 0;}
+.band .label{color:color-mix(in srgb,var(--on-sage) 70%,transparent);}
+.band-quote{font-family:var(--f-display);font-style:italic;font-weight:500;font-size:clamp(1.4rem,4.2vw,2.6rem);
+line-height:1.2;max-width:26ch;margin:1rem 0 0;}
+.band-quote em{font-style:normal;color:var(--pearl);}
+.band-in{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);}
+.closing{background:var(--bone-2);margin:0 calc(50% - 50vw);
+padding:clamp(1.8rem,3.6vw,2.6rem) 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+.closing .story{max-width:60ch;margin-top:1.4rem;}
+.closing .tz{font-size:clamp(1.12rem,3.2vw,1.6rem);}
+.pass-grid{display:grid;gap:clamp(1.6rem,4vw,2.8rem);align-items:start;}
+@media (min-width:860px){.pass-grid{grid-template-columns:minmax(0,1fr) 268px;}}
+.mood{margin:0;}
+.mood-body{aspect-ratio:9/16;width:100%;max-width:268px;background:var(--ink);
+overflow:hidden;border:1px solid var(--rule);}
+@media (max-width:859px){.mood-body{max-width:220px;}}
+.mood-body video{width:100%;height:100%;object-fit:cover;display:block;}
+.tz--static{display:block;margin:0;padding:.9rem 0 .3rem;}
+.ph-note{margin:1.2rem 0 0;max-width:60ch;border:1px dashed var(--magenta);
+padding:1rem 1.1rem;color:var(--ink-2);font-size:.95rem;line-height:1.55;}
+.ph-note .label{display:block;color:var(--magenta);margin-bottom:.4rem;}
+.nums{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:1.5rem;}
+@media (min-width:620px){.nums{grid-template-columns:repeat(3,1fr);}}
+.num{background:var(--bone);padding:clamp(1rem,2.6vw,1.6rem);}
+.num b{display:block;font-family:var(--f-display);font-weight:900;font-size:clamp(1.7rem,4.6vw,2.5rem);
+line-height:1;font-variant-numeric:tabular-nums;color:var(--oxblood);}
+.num span{display:block;margin-top:.45rem;font-size:.85rem;color:var(--ink-2);}
+.quotes{display:grid;gap:.9rem;}
+@media (min-width:800px){.quotes{grid-template-columns:repeat(3,1fr);}}
+.quote{border:1px dashed var(--magenta);padding:clamp(1rem,2.6vw,1.5rem);background:var(--bone-2);
+display:flex;flex-direction:column;gap:.7rem;min-height:150px;}
+.quote .who{font-family:var(--f-display);font-weight:700;font-size:1.02rem;}
+.quote .role2{font-size:.84rem;color:var(--ink-2);}
+.quote .status{margin-top:auto;font-family:var(--f-mono);font-size:9px;letter-spacing:.14em;
+text-transform:uppercase;color:var(--magenta);}
+.sec-lead{color:var(--ink-2);max-width:54ch;margin:.5rem 0 0;}
+.svc{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);}
+@media (min-width:620px){.svc{grid-template-columns:repeat(2,1fr);}}
+@media (min-width:1040px){.svc{grid-template-columns:repeat(4,1fr);}}
+.svc-card{background:var(--bone);padding:clamp(1.2rem,3vw,1.8rem);}
+.svc-card h3{margin:0 0 .7rem;font-family:var(--f-display);font-weight:900;
+font-size:clamp(1.12rem,2.9vw,1.4rem);line-height:1.15;}
+.svc-note{font-family:var(--f-mono);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;
+color:var(--magenta);vertical-align:middle;margin-left:.4rem;border:1px solid var(--magenta);
+padding:.18rem .38rem;white-space:nowrap;}
+.svc-card p{margin:0;color:var(--ink-2);font-size:.94rem;line-height:1.65;}
+.svc-foot{margin:1.4rem 0 0;max-width:60ch;color:var(--ink-2);font-size:.94rem;}
+.contact-lead{max-width:48ch;color:var(--ink-2);margin:0 0 1.6rem;}
+.contact-claim{font-family:var(--f-display);font-weight:900;font-size:clamp(1.8rem,6.4vw,3.7rem);
+line-height:1;letter-spacing:-.025em;margin-bottom:1.5rem;}
+.contact-rows{display:grid;border-top:1px solid var(--rule);max-width:640px;}
+.crow{display:flex;justify-content:space-between;gap:1rem;padding:.9rem 0;
+border-bottom:1px solid var(--rule);align-items:baseline;}
+.crow-v{font-weight:600;}
+footer{border-top:1px solid var(--rule);padding:1.8rem 0 3rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.notice{background:var(--bone-2);border-left:3px solid var(--magenta);padding:1rem 1.15rem;
+margin-top:2rem;font-size:.89rem;color:var(--ink-2);max-width:64ch;}
+.notice b{color:var(--ink);} .notice ul{margin:.6rem 0 0;padding-left:1.1rem;}
+.notice li{margin-bottom:.25rem;}
+/* CASE STUDY BLOECKE */
+.case-lead{max-width:none;margin:1.3rem 0 0;font-size:1.02rem;line-height:1.65;color:var(--ink-2);}
+.case-lead strong{color:var(--ink);font-weight:600;}
+.case-lead a{color:var(--oxblood);text-underline-offset:3px;}
+.cs-grid{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:1.3rem;}
+@media (min-width:820px){.cs-grid{grid-template-columns:repeat(2,1fr);}}
+.cs-box{background:var(--bone);padding:clamp(1rem,2.2vw,1.35rem);}
+.cs-h{margin:0 0 .65rem;font-family:var(--f-mono);font-weight:700;font-size:9.5px;
+letter-spacing:.19em;text-transform:uppercase;color:var(--magenta);}
+.cs-box p{margin:0;color:var(--ink-2);font-size:.95rem;line-height:1.63;}
+.cs-box p strong{color:var(--ink);font-weight:600;}
+.cs-box a{color:var(--oxblood);text-underline-offset:3px;}
+.pos-sub{max-width:94ch;margin:1.1rem 0 0;color:var(--ink-2);font-size:1rem;line-height:1.65;}
+.cv-single{display:grid;gap:clamp(1.6rem,3.4vw,2.6rem);}
+@media (min-width:820px){.cv-single{grid-template-columns:1fr 1.15fr;
+gap:clamp(2rem,4vw,3.5rem);}}
+.cv-single .cv-row{gap:.9rem;}
+a.crow{text-decoration:none;color:inherit;transition:color .18s;}
+a.crow:hover .crow-v,a.crow:focus-visible .crow-v{color:var(--magenta);}
+.linkbar{margin-top:1.1rem;padding-top:.75rem;border-top:1px solid var(--rule);
+font-size:.9rem;color:var(--ink-2);line-height:1.8;}
+.linkbar .label{display:block;margin-bottom:.35rem;}
+.lk i{font-style:normal;font-family:var(--f-mono);font-size:9px;letter-spacing:.14em;
+text-transform:uppercase;color:var(--ink-2);margin-right:.45rem;}
+.mediahead{margin:1.4rem 0 .7rem;display:block;}
+.pass-p{margin:0 0 1.05rem;max-width:62ch;color:var(--ink-2);font-size:1.01rem;line-height:1.68;}
+.pass-p:last-child{margin-bottom:0;}
+.pass-lead{font-family:var(--f-display);font-style:italic;font-weight:500;color:var(--ink);
+font-size:clamp(1.12rem,3.2vw,1.6rem);line-height:1.38;max-width:26ch;margin:.9rem 0 1.3rem;}
+/* HERO OPENING LINE + ROLLEN */
+.hero-line{font-family:var(--f-display);font-style:italic;font-weight:500;color:var(--ink);
+font-size:clamp(1.05rem,2.9vw,1.95rem);line-height:1.25;margin:clamp(1.1rem,2.8vw,1.6rem) 0 0;
+max-width:none;}
+@media (min-width:760px){.hero-line{white-space:nowrap;}}
+.hero-roles{display:grid;grid-template-columns:1fr;gap:.5rem;margin:clamp(1.2rem,2.8vw,1.7rem) 0 0;}
+@media (min-width:820px){.hero-roles{grid-template-columns:repeat(3,1fr);gap:.7rem;align-items:stretch;}}
+.en{display:none;}
+html[data-lang="en"] .de{display:none;}
+html[data-lang="en"] .en{display:inline;}
+.langsw{display:inline-flex;align-items:center;gap:.4rem;}
+.langsw button{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.17em;
+text-transform:uppercase;color:var(--ink-2);background:none;border:0;padding:0;
+cursor:pointer;transition:color .18s;}
+.langsw button:hover{color:var(--magenta);}
+.langsw button[aria-current="true"]{color:var(--magenta);font-weight:700;}
+.langsw i{font-style:normal;color:var(--rule);}
+.hero .hero-roles{z-index:6;}
+.role{position:relative;}
+.role-btn{width:100%;height:100%;display:flex;align-items:center;justify-content:space-between;gap:.7rem;
+font-family:var(--f-mono);font-size:clamp(10px,1.05vw,12px);letter-spacing:.13em;
+text-transform:uppercase;color:var(--magenta);background:transparent;
+border:1px solid var(--magenta);padding:.72rem .85rem;line-height:1.25;text-align:left;
+cursor:pointer;transition:background .18s,color .18s;}
+.role-btn svg{width:13px;height:13px;flex:0 0 auto;transition:transform .22s;}
+.role-btn:hover,.role-btn:focus-visible{background:var(--magenta);color:#FFF;}
+.role-btn[aria-expanded="true"]{background:var(--magenta);color:#FFF;}
+.role-btn[aria-expanded="true"] svg{transform:rotate(180deg);}
+.role-menu{display:none;position:absolute;top:calc(100% + 4px);left:0;right:0;z-index:60;
+border:1px solid var(--magenta);background:var(--bone);
+box-shadow:0 14px 30px -18px rgba(25,19,19,.55);}
+.role-menu.on{display:block;}
+.role-menu a{display:block;font-family:var(--f-body);font-style:normal;font-weight:500;
+padding:.6rem .85rem;font-size:.86rem;line-height:1.3;
+color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule);}
+.role-menu a:last-child{border-bottom:0;}
+.role-menu a:hover,.role-menu a:focus-visible{background:var(--bone-2);color:var(--magenta);}
+.filterbar{display:none;align-items:center;gap:1rem;flex-wrap:wrap;
+border:1px solid var(--magenta);padding:.7rem .9rem;margin:0 0 1.2rem;
+position:sticky;top:0;z-index:30;background:var(--bone);
+box-shadow:0 6px 18px -14px rgba(25,19,19,.5);}
+.filterbar.on{display:flex;}
+.fb-text{font-family:var(--f-mono);font-size:10px;letter-spacing:.14em;
+text-transform:uppercase;color:var(--magenta);}
+.fb-reset{margin-left:auto;font-family:var(--f-mono);font-size:9px;letter-spacing:.14em;
+text-transform:uppercase;color:var(--ink-2);background:none;border:0;
+border-bottom:1px solid var(--rule);padding:0 0 2px;cursor:pointer;}
+.fb-reset:hover{color:var(--magenta);border-bottom-color:var(--magenta);}
+[data-skills]{transition:opacity .25s;}
+.dimmed{opacity:.3;}
+.case--hit{background:linear-gradient(90deg,color-mix(in srgb,var(--magenta) 6%,transparent),transparent 55%);}
+.case--hit::before{content:"";position:absolute;left:-10px;top:.6rem;bottom:.6rem;
+width:3px;background:var(--magenta);}
+.case{position:relative;}
+@media (max-width:640px){.hero-roles{flex-direction:column;align-items:flex-start;gap:.35rem;}}
+html{scroll-behavior:smooth;}
+.case,#eigenes{scroll-margin-top:4.6rem;}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+/* POSITIONING + BELEG */
+.pos{font-family:var(--f-display);font-weight:500;color:var(--ink);
+font-size:clamp(1.02rem,2.2vw,1.3rem);line-height:1.45;max-width:none;margin:clamp(1.3rem,2.8vw,1.9rem) 0 0;}
+.pos b{font-weight:700;color:var(--ink);font-style:normal;}
+.proof{margin:1.1rem 0 0;padding-top:.85rem;border-top:1px solid var(--rule);
+max-width:none;color:var(--ink-2);font-size:.92rem;}
+.proof .label{display:block;margin-bottom:.45rem;}
+/* SKILLS */
+.skills{margin-top:clamp(1.2rem,2.6vw,1.7rem);}
+.sk-groups{display:grid;gap:0 clamp(1.8rem,4vw,3rem);}
+@media (min-width:760px){.sk-groups{grid-template-columns:repeat(2,1fr);}}
+.tools{margin:clamp(1.1rem,2.4vw,1.5rem) 0 0;padding-top:.8rem;border-top:1px solid var(--rule);
+color:var(--ink-2);font-size:.92rem;line-height:1.7;max-width:none;}
+.tools .label{display:block;margin-bottom:.45rem;}
+.softwrap{margin-top:clamp(1.6rem,3.4vw,2.2rem);}
+.soft{display:grid;gap:.4rem;margin-top:.55rem;}
+@media (min-width:760px){.soft{grid-template-columns:repeat(2,1fr);gap:.4rem 2rem;}}
+.sk-h{margin:0 0 .3rem;font-family:var(--f-mono);font-size:9.5px;letter-spacing:.19em;
+text-transform:uppercase;color:var(--magenta);font-weight:700;}
+.sk-list{display:grid;border-top:1px solid color-mix(in srgb,var(--rule) 55%,transparent);}
+.sk-row{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;
+padding:.36rem 0;border-bottom:1px solid color-mix(in srgb,var(--rule) 55%,transparent);}
+.sk-row b{font-weight:500;font-size:.82rem;color:var(--ink-2);}
+.sk-lvl{flex:0 0 auto;font-family:var(--f-mono);font-size:7.5px;letter-spacing:.1em;
+text-transform:uppercase;color:var(--ink-2);display:inline-flex;align-items:center;gap:.45rem;}
+.dots{display:inline-flex;gap:3px;}
+.dots i{width:4.5px;height:4.5px;border-radius:50%;border:1px solid var(--rule);display:block;}
+.dots i.on{background:var(--magenta);border-color:var(--magenta);}
+.soft span{font-family:var(--f-display);font-weight:500;font-size:clamp(1rem,2.4vw,1.16rem);
+line-height:1.35;color:var(--ink);padding:.42rem 0;border-bottom:1px solid var(--rule);}
+/* WERDEGANG */
+.cv{display:grid;gap:clamp(1.8rem,4vw,2.8rem);}
+@media (min-width:880px){.cv{grid-template-columns:1.25fr 1fr;}}
+.cv-list{display:grid;border-top:1px solid var(--rule);}
+.cv-row{display:flex;justify-content:space-between;gap:1.2rem;align-items:baseline;
+padding:.62rem 0;border-bottom:1px solid var(--rule);}
+.cv-what{min-width:0;}
+.cv-what b{display:block;font-weight:600;font-size:.97rem;color:var(--ink);line-height:1.3;}
+.cv-what span{display:block;margin-top:.12rem;font-size:.88rem;color:var(--ink-2);}
+.cv-when{flex:0 0 auto;font-family:var(--f-mono);font-size:9.5px;letter-spacing:.13em;
+text-transform:uppercase;color:var(--ink-2);white-space:nowrap;}
+.status{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--f-mono);
+font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--magenta);
+border:1px solid var(--magenta);padding:.3rem .5rem;line-height:1;}
+.status i{width:6px;height:6px;border-radius:50%;background:var(--magenta);display:block;}
+.cs-box--wip{background:repeating-linear-gradient(135deg,transparent 0 9px,
+color-mix(in srgb,var(--magenta) 7%,transparent) 9px 10px),var(--bone);}
+.wip-tag{display:inline-block;font-family:var(--f-mono);font-size:8.5px;letter-spacing:.16em;
+text-transform:uppercase;background:var(--magenta);color:#FFF;padding:.26rem .45rem;
+line-height:1;margin-bottom:.6rem;}
+@media (max-width:700px){
+  .am-media{aspect-ratio:4/5;}
+  .am-who{padding-bottom:40%;font-size:clamp(1.5rem,8vw,2.4rem);}
+  .am-list li{font-size:.66rem;letter-spacing:.12em;}
+  .am-list{gap:.22rem;}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+</style>
+</head>
+<body>
+<script>
+(function(){
+  var g = null;
+  try{ g = localStorage.getItem("sprache"); }catch(e){}
+  var l = g || (((navigator.language || "de").toLowerCase().indexOf("de") === 0) ? "de" : "en");
+  document.documentElement.setAttribute("data-lang", l);
+  document.documentElement.setAttribute("lang", l);
+})();
+</script>
+<div class="wrap">
+<header class="hero">
+  <div class="hero-top"><span class="label">Portfolio</span>
+    <span class="label langsw"><span style="margin-right:.9rem;">2026</span><button type="button" data-lang="de">DE</button><i>/</i><button type="button" data-lang="en">EN</button></span></div>
+  <h1 class="wordmark" id="wordmark">Rosalina Patricia Celestino</h1>
+  <p class="hero-line"><span class="de" lang="de">Ich übersetze Ästhetik in Content, den Leute sich merken.</span><span class="en" lang="en">I turn aesthetics into content people remember.</span></p>
+  <div class="hero-roles">
+    <div class="role"><button type="button" class="role-btn" data-rolle="social" aria-expanded="false">Social Media / Project Management<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="role-menu"></div></div>
+    <div class="role"><button type="button" class="role-btn" data-rolle="content" aria-expanded="false">Content Production<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="role-menu"></div></div>
+    <div class="role"><button type="button" class="role-btn" data-rolle="direction" aria-expanded="false">Creative Direction &amp; Creative Strategy<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="role-menu"></div></div>
+  </div>
+  <div class="contact-btns">
+    <a class="cbtn" href="mailto:rosalina.celestino@gmx.de"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>rosalina.celestino@gmx.de</a>
+    <a class="cbtn" href="tel:+491737044492"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>+49 173 7044492</a>
+  </div>
+</header>
+
+<section id="about">
+  <div class="sec-head"><span class="label">01 · About</span></div>
+  <div class="aboutme">
+    <div class="am-media">
+      <video src="media/00_about_who-am-i.mp4" poster="media/00_about_who-am-i_vorschau.jpg" autoplay muted loop playsinline preload="none"></video>
+      <span class="am-scrim"></span>
+      <button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button>
+    </div>
+    <p class="am-who">&ldquo;WHO AM I&rdquo;</p>
+    <ul class="am-list">
+      <li>Aesthetic Storyteller</li>
+      <li>Fashion, Beauty &amp; Culture Enthusiast</li>
+      <li>Gen Z</li>
+      <li>German Based</li>
+    </ul>
+  </div>
+
+  <p class="pos"><span class="de" lang="de">Ich helfe Marken und Künstler:innen aus Mode, Beauty und Subkultur, <b>nicht nur gesehen, sondern erinnert zu werden.</b></span><span class="en" lang="en">I help brands and artists in fashion, beauty and subculture <b>not only to be seen, but to be remembered.</b></span></p>
+
+  <p class="pos-sub"><span class="de" lang="de">Ich weiß, wie ein Set läuft, wie ein Kanal wächst und wie man Projekte finalisiert. Weil ich alle drei selbst seit über sechs Jahren mache.</span><span class="en" lang="en">I know how a set runs, how a channel grows and how a project gets finished. Because I have six years of experience across all three.</span></p>
+
+  <p class="pos-sub"><span class="de" lang="de">Als Creative Directorin möchte ich künftig mehr Projekte aus Kultur und Szene umsetzen. Und Brands und Persönlichkeiten dabei helfen, ihre eigene Handschrift in Content zu übersetzen und sichtbar zu platzieren.</span><span class="en" lang="en">As a creative director I want to work on more projects from culture and the scene. And help brands and people translate their own signature into content, and place it where it gets seen.</span></p>
+
+  <p class="proof"><span class="label"><span class="de" lang="de">Gearbeitet mit</span><span class="en" lang="en">Worked with</span></span>SICKY Magazine · Sven Barucha · Vision Ekstase · Lehmann Club Stuttgart · Atelier Schänzlin · Gude Zeit Kollektiv</p>
+
+</section>
+
+<section id="arbeiten">
+  <div class="sec-head"><span class="label">02 · <span class="de" lang="de">Kreative Projekte</span><span class="en" lang="en">Creative Projects</span></span>
+    <h2 class="sec-title">Case Studies</h2>
+  </div>
+  <div class="filterbar" id="filterbar"><span class="fb-text"></span><button type="button" class="fb-reset"><span class="de" lang="de">Zur&uuml;cksetzen</span><span class="en" lang="en">Reset</span></button></div>
+
+  <article class="case" id="klimek" data-skills="content">
+    <div class="case-head"><div class="case-meta"><span class="label"><span class="de" lang="de">Oktober 2026 · Esslingen</span><span class="en" lang="en">October 2026 · Esslingen</span></span></div>
+      <h3 class="case-title">KLIMEK FW26 · Behind the Scenes &amp; Set Assistance</h3></div>
+
+    <p class="label mediahead"><span class="de" lang="de">BTS-Content · eigene Produktion, zwei Schnittfassungen</span><span class="en" lang="en">BTS content · own production, two edits</span></p>
+    <div class="strip">
+      <figure class="phone"><div class="phone-body"><video src="media/klimek_06_bts-artist-day.mp4" poster="media/klimek_06_bts-artist-day_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption><span class="de" lang="de">Artist Day · Custom Pieces</span><span class="en" lang="en">Artist Day · custom pieces</span></figcaption></figure>
+      <figure class="phone"><div class="phone-body"><video src="media/klimek_07_bts-shooting-day.mp4" poster="media/klimek_07_bts-shooting-day_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption><span class="de" lang="de">Shooting Day · Behind the Scenes</span><span class="en" lang="en">Shooting Day · behind the scenes</span></figcaption></figure>
+    </div>
+
+    <p class="label mediahead">Look 1 &middot; <span class="de" lang="de">vom Lookboard ins Bild</span><span class="en" lang="en">from lookboard to final image</span></p>
+    <div class="kampagne">
+      <figure><img src="media/klimek_01_lookboard-look1.jpg" alt="Lookboard-Seite zu Look 1"><figcaption>Shooting-Lookboard &middot; Styling @alxa.archive</figcaption></figure>
+      <figure><img src="media/klimek_02_powder.jpg" alt="Model im weissen Powder Longsleeve"><figcaption><span class="de" lang="de">Kampagnenbild</span><span class="en" lang="en">Campaign photo</span> &middot; @oceansphotography.ve</figcaption></figure>
+    </div>
+
+    <p class="label mediahead">Look 2 &middot; <span class="de" lang="de">vom Lookboard ins Bild</span><span class="en" lang="en">from lookboard to final image</span></p>
+    <div class="kampagne">
+      <figure><img src="media/klimek_03_lookboard-look2.jpg" alt="Lookboard-Seite zu Look 2"><figcaption>Shooting-Lookboard &middot; Styling @alxa.archive</figcaption></figure>
+      <figure><img src="media/klimek_04_halfzip.jpg" alt="Model im grauen Half-Zip ueber weissem Hemd"><figcaption><span class="de" lang="de">Kampagnenbild</span><span class="en" lang="en">Campaign photo</span> &middot; @oceansphotography.ve</figcaption></figure>
+      <figure><img src="media/klimek_05_nacken.jpg" alt="Nackenansicht mit KLIMEK-Stick auf grauem Half-Zip"><figcaption><span class="de" lang="de">Kampagnenbild</span><span class="en" lang="en">Campaign photo</span> &middot; @oceansphotography.ve</figcaption></figure>
+    </div>
+
+    <p class="case-lead"><a class="ilink" href="https://www.instagram.com/klimek.official/">@klimek.official</a><span class="de" lang="de"> ist ein deutsches Fashion-Label. Die Kollektion besteht aus sechs Teilen in Grau, Minimalismus nennt das Label eine tägliche Entscheidung. Für den Release FW 2026 wurde ein ganzer Artist Day produziert: Tätowiererinnen und Künstlerinnen haben einzelne Teile der Kollektion in ihrem eigenen Stil bemalt.</span><span class="en" lang="en"> is a German fashion label. The collection consists of six pieces in grey, and the label calls minimalism a daily decision rather than an aesthetic. For the FW 2026 release they produced a full artist day: tattoo artists and illustrators painted individual pieces of the collection in their own style.</span></p>
+
+    <div class="cs-grid"><div class="cs-box"><h4 class="cs-h">Objective</h4><p><span class="de" lang="de">Der Release sollte nicht nur über Kampagnenbilder laufen. Das Label hat zum Launch den kompletten Instagram-Feed archiviert und den Kanal mit neuen Bildern neu aufgesetzt, um eine andere Reichweite aufzubauen. Aus dem Drehtag sollte Content entstehen, der den Entstehungsprozess zeigt und in diesem neuen Feed eigenständig funktioniert. Ein früheres Behind-the-Scenes-Reel hatte den Kanal kaum erreicht.</span><span class="en" lang="en">The release was not meant to run on campaign images alone. For the launch the label archived its entire Instagram feed and rebuilt the channel with new imagery, to open up a different kind of reach. The shoot day was supposed to produce content that shows how the pieces came about and works on its own inside that new feed. An earlier behind-the-scenes reel had barely reached anyone.</span></p></div><div class="cs-box"><h4 class="cs-h">Approach</h4><p><span class="de" lang="de">Das Label tritt bewusst reduziert auf, sechs Teile, eine Farbe. Am Artist Day entsteht daraus das Gegenteil: aus Uniform werden Einzelstücke. Dieser Bruch trägt das Video. Statt einer sachlichen Überschrift ein Hook, der in den ersten Sekunden eine Erwartung kippt, dazu Musik aus dem Umfeld des Labels.</span><span class="en" lang="en">The label keeps itself deliberately reduced: six pieces, one colour. The artist day turns that into its opposite, uniform becomes one-off. That contrast carries the video. Instead of a factual caption, a hook that flips an expectation in the first seconds, paired with music from the label&rsquo;s own circle.</span></p></div><div class="cs-box"><h4 class="cs-h">Execution</h4><p><span class="de" lang="de">Über zwölf Stunden am Set, Content-Dreh parallel zur laufenden Produktion. Dazu Set-Assistenz, Zuarbeit für Fotografie und Styling sowie kreativer Input vor Ort. Schnitt in CapCut, Musikauswahl und Hooktext. Das fertige Material geht zur Veröffentlichung an das Label.</span><span class="en" lang="en">Over twelve hours on set, shooting content alongside the running production. Plus set assistance, support for photography and styling, and creative input on location. Edited in CapCut, music selection and hook copy. The finished material goes to the label for publishing.</span></p></div><div class="cs-box"><h4 class="cs-h">Outcome</h4><p><span class="de" lang="de">Der Release lief am 29. Oktober 2026 mit dem neu aufgesetzten Feed. Aus dem Drehtag sind zwei Schnittfassungen entstanden, beide an das Label übergeben. Veröffentlichung auf dem Kanal des Labels steht aus, Zahlen kommen danach an diese Stelle.</span><span class="en" lang="en">The release went live on 29 October 2026 with the rebuilt feed. The shoot day produced two edits, both handed over to the label. Publication on the label&rsquo;s channel is still pending; numbers will follow here.</span></p></div></div>
+
+    <div class="keys"><span class="key">BTS Content</span><span class="key">Content Production</span><span class="key">Set Assistance</span><span class="key">Video Editing</span></div>
+
+    <p class="linkbar"><span class="label">Verlinkungen</span><span class="lk"><i>Label</i><a class="ilink" href="https://www.instagram.com/klimek.official/">@klimek.official</a></span> &middot; <span class="lk"><i><span class="de" lang="de">Fotografie</span><span class="en" lang="en">Photography</span></i><a class="ilink" href="https://www.instagram.com/oceansphotography.ve/">@oceansphotography.ve</a></span> &middot; <span class="lk"><i>Styling</i><a class="ilink" href="https://www.instagram.com/alxa.archive/">@alxa.archive</a></span></p>
+  </article>
+
+  <article class="case" id="sicky" data-skills="content">
+    <div class="case-head"><div class="case-meta"><span class="label">Juli 2026 · Stuttgart</span></div>
+      <h3 class="case-title">„Hardware“ · Editorial Shoot · Assistance &amp; BTS</h3></div>
+    <div class="duo">
+      <div class="duo-main">
+        <figure class="laptop"><div class="laptop-screen">
+          <video src="media/sicky_01_strecke-online.mp4" poster="media/sicky_01_strecke-online_vorschau.jpg" autoplay muted loop playsinline preload="none"></video></div>
+          <div class="laptop-base"></div><figcaption>&bdquo;Hardware&ldquo; auf sickymag.com</figcaption></figure>
+        <p class="label duo-h"><span class="de" lang="de">Aus der veröffentlichten Strecke</span><span class="en" lang="en">From the published story</span></p>
+        <div class="finals3">
+          <figure><img src="media/sicky_05_final.jpg" alt="Hand mit skulpturaler Nail Art an einer schwarzen Tasche"></figure>
+          <figure><img src="media/sicky_06_final.jpg" alt="Beauty-Portrait mit langen burgunderfarbenen Nägeln"></figure>
+          <figure><img src="media/sicky_07_final.jpg" alt="Rückansicht mit nassem Haar und Metallringen"></figure>
+        </div>
+        <p class="label duo-h" style="margin-top:.45rem;"><span class="de" lang="de">Editorial · Fotografie @sbarucha</span><span class="en" lang="en">Editorial · photography @sbarucha</span></p>
+      </div>
+      <div class="duo-side">
+        <figure class="artcard"><img src="media/sicky_04_credits.jpg" alt="Titel und Credits der Strecke Hardware im SICKY Magazine">
+          <figcaption style="text-align:left;padding:.55rem .7rem;background:var(--bone);">Credits der Strecke · SICKY Magazine</figcaption></figure>
+        <p class="label duo-h">Behind the Scenes · <span class="de" lang="de">eigene Produktion und Schnitt</span><span class="en" lang="en">own production and edit</span></p>
+        <div class="duo-bts"><figure class="phone"><div class="phone-body"><video src="media/sicky_02_bts-vs-final.mp4" poster="media/sicky_02_bts-vs-final_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption>BTS vs. Final</figcaption></figure><figure class="phone"><div class="phone-body"><video src="media/sicky_03_am-set.mp4" poster="media/sicky_03_am-set_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption>Am Set</figcaption></figure></div>
+      </div>
+    </div>
+    <p class="label mediahead"><span class="de" lang="de">Am Set · Moodboard-Abgleich vor dem Shooting</span><span class="en" lang="en">On set · going through the moodboard before the shoot</span></p>
+    <div class="strip">
+      <figure class="phone"><div class="phone-body"><video src="media/sicky_10_moodboard-am-set.mp4" poster="media/sicky_10_moodboard-am-set_vorschau.jpg" autoplay muted loop playsinline preload="none"></video></div><figcaption><span class="de" lang="de">Eigene Aufnahme vom Set</span><span class="en" lang="en">Own footage from set</span></figcaption></figure>
+    </div>
+
+    <p class="case-lead"><span class="de" lang="de"><a class="ilink" href="https://svenbarucha.com">Sven Barucha</a> macht Beauty- und Kosmetikfotografie in Stuttgart und arbeitet mit namhaften Kunden. Für „Hardware“ entstanden neun Looks rund um skulpturale Nail Art von Tanja Gravina, kombiniert mit Statement-Pieces von Bottega Veneta, Dior und Gucci.</span><span class="en" lang="en"><a class="ilink" href="https://svenbarucha.com">Sven Barucha</a> is a beauty photographer based in Stuttgart who works with high-profile clients. &ldquo;Hardware&rdquo; produced nine looks built around sculptural nail art by Tanja Gravina, paired with statement pieces from Bottega Veneta, Dior and Gucci.</span></p>
+    <div class="cs-grid"><div class="cs-box"><h4 class="cs-h">Objective</h4><p><span class="de" lang="de">Aus dem Shoot mehr Content ziehen als die finalen Bilder, um seine Kanäle über die Strecke hinaus zu bespielen und Insights aus dem Shoot für Community Building zu zeigen.</span><span class="en" lang="en">Get more content out of the shoot than the final images, to keep his channels running beyond the story itself and to show insights from the set for community building.</span></p></div><div class="cs-box"><h4 class="cs-h">Approach</h4><p><span class="de" lang="de">Das fertige Editorial zeigt das Ergebnis, nicht das Handwerk. Behind the Scenes verkauft den Prozess und lässt sich in mehr Formate übersetzen als ein einzelnes Bild.</span><span class="en" lang="en">The finished editorial shows the result, not the craft. Behind the scenes sells the process and translates into more formats than a single image.</span></p></div><div class="cs-box"><h4 class="cs-h">Execution</h4><p><span class="de" lang="de">Shooting-Assistenz am Set für Fotografie und Styling sowie für die Umsetzung des Moodboards. Dazu Konzept, Dreh und Schnitt von sechs BTS-Assets. Schnitt in CapCut.</span><span class="en" lang="en">Shooting assistance on set for photography and styling, and for executing the moodboard. Plus concept, shooting and editing of six BTS assets. Edited in CapCut.</span></p></div><div class="cs-box"><h4 class="cs-h">Metrics &amp; Impact</h4><p><span class="de" lang="de">Zwei Assets ausgespielt, das erste als Collab mit <span class="stat">4.812</span> Aufrufen, 164 Likes und 18 Speicherungen. Sven Barucha hat das Material auf seinem eigenen Kanal veröffentlicht, den er als professionelles Portfolio gegenüber Kunden führt. Inzwischen verwendet er einzelne Szenen aus dem BTS-Material auch in eigenen kurzen Reels weiter. Die Strecke selbst erschien im Juli im SICKY Magazine.</span><span class="en" lang="en">Two assets published, the first as a collab with <span class="stat">4,812</span> views, 164 likes and 18 saves. Sven Barucha published the material on his own channel, which he runs as a professional portfolio towards clients. He now reuses individual scenes from the BTS material in his own short reels. The story itself ran in SICKY Magazine in July.</span></p></div></div>
+    <div class="keys"><span class="key">Set Assistance</span><span class="key">BTS Content</span><span class="key">Content Production</span><span class="key">Video Editing</span></div>
+
+    <p class="brands"><span class="label">Marken im Shooting</span>Saint Laurent · Bottega Veneta · Dior · Givenchy · Rabanne · Gucci · Etro · Róhe · Simkhai · 2310 Studio · Louisa Ballou</p>
+    <p class="linkbar"><span class="label">Verlinkungen</span><span class="lk"><i>Fotografie</i><a class="ilink" href="https://www.instagram.com/sbarucha/">@sbarucha</a></span> &middot; <span class="lk"><i>Magazin</i><a class="ilink" href="https://sickymag.com">sickymag.com</a></span></p>
+  </article>
+
+  <article class="case" id="ve-kurzfilm" data-skills="direction">
+    <div class="case-head"><div class="case-meta"><span class="label">September 2026 · Stuttgart</span></div>
+      <h3 class="case-title">Vision Ekstase Shortfilm Editorial · Creative Direction Associate, Behind the Scenes &amp; PA</h3></div>
+    <div class="strip">
+      <figure class="phone"><div class="phone-body"><video src="media/vision-ekstase_kurzfilm.mp4" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption><span class="de" lang="de">Kurzfilm</span><span class="en" lang="en">Short film</span></figcaption></figure>
+      <figure class="phone"><div class="phone-body"><video src="media/vision-ekstase_bts_reel.mp4" poster="media/vision-ekstase_bts_reel_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption><span class="de" lang="de">BTS-Reel</span><span class="en" lang="en">BTS reel</span></figcaption></figure>
+    </div>
+
+    <p class="label mediahead"><span class="de" lang="de">Vor dem Dreh · Moodboard und Ablauf</span><span class="en" lang="en">Before the shoot · moodboard and schedule</span></p>
+    <div class="prozess">
+      <figure><img src="media/vision-ekstase_08_moodboard.jpg" alt="Kopfbereich des Moodboards zum Drehtag am 17.09."><figcaption><span class="de" lang="de">Moodboard zum Drehtag · Ausschnitt · Creative Direction @oceansphotography.ve &amp; @genalireth.ve</span><span class="en" lang="en">Moodboard for the shoot day · excerpt · creative direction @oceansphotography.ve &amp; @genalireth.ve</span></figcaption></figure>
+    </div>
+    <p class="case-lead"><a class="ilink" href="https://www.instagram.com/visionekstase/">@visionekstase</a> <span class="de" lang="de">produziert seit Jahren eigene Editorials und Reels für die eigenen Kanäle. Dieser hier ist der Trailer zum nächsten Vision Ekstase am 10.10.2026 im Lehmann Club.</span><span class="en" lang="en">has been producing its own editorials and reels for its channels for years. This one is the trailer for the next Vision Ekstase on 10 October 2026 at Lehmann Club.</span></p>
+    <div class="cs-grid"><div class="cs-box"><h4 class="cs-h">Objective</h4><p><span class="de" lang="de">Das Editorial, das nicht nur für Veranstaltungen wirbt, sondern auch danach auf dem Kanal funktioniert. Ein Moodboard wurde in detaillierte Szenen umgesetzt, das am Drehtag eindeutig definierte Szenen für Fotografin und Videograf liefert.</span><span class="en" lang="en">An editorial that does not only promote events but keeps working on the channel afterwards. A moodboard was turned into detailed scenes, giving the photographer and the videographer clearly defined scenes on the shoot day.</span></p></div><div class="cs-box"><h4 class="cs-h">Approach</h4><p><span class="de" lang="de">Social Media wird aktuell von KI-generierten Videos überlaufen, die oftmals unauthentisch wirken. Dieses Editorial soll dagegenwirken. Shoot und BTS liefen daher unter dem Motto: „F*CK AI, we make that sh*t ourselves.“ Alles ist vor Ort gefilmt, mit Requisiten, Make-up und echten Menschen, ohne Special Effects. Die Referenzen lagen zwischen Rüstung und Wüste, in der Bildsprache nah an Dune. Daraus wurde ein Narrativ: eine warme und eine kühle Figur, ein Portal zwischen zwei Welten, konsequente Perspektivwechsel.</span><span class="en" lang="en">Social media is currently being flooded with AI-generated videos that often feel inauthentic. This editorial is meant to push back. Shoot and BTS therefore ran under the motto: &ldquo;F*CK AI, we make that sh*t ourselves.&rdquo; Everything is filmed on location, with props, make-up and real people, no special effects. The references sat between armour and desert, visually close to Dune. That became a narrative: a warm figure and a cold one, a portal between two worlds, consistent shifts in perspective.</span></p></div><div class="cs-box"><h4 class="cs-h">Execution</h4><p><span class="de" lang="de">Das Moodboard kam in zwei Fassungen von der Creative Direction. Auf dieser Grundlage und nach deren Feedback habe ich den Szenenplan geschrieben: einzelne Szenen mit Einstellungen, Kameraperspektiven und Übergängen, dazu ein eigener BTS-Plan. Am Drehtag in den Rollen Creative Direction Associate und Personal Assistant am Set sowie mit BTS-Aufnahmen. Das BTS-Reel habe ich auf dem iPhone 13 Plus gedreht und in CapCut für den Kanal von Vision Ekstase geschnitten. Videografie und Schnitt des Trailers: @phillprp.</span><span class="en" lang="en">The moodboard came from creative direction in two versions. Building on it and on their feedback I wrote the scene plan: individual scenes with framings, camera angles and transitions, plus a separate BTS plan. On the shoot day I worked as creative direction associate and personal assistant on set, and shot BTS footage. I filmed the BTS reel on an iPhone 13 Plus and edited it in CapCut for the Vision Ekstase channel. Videography and edit of the trailer: @phillprp.</span></p></div><div class="cs-box"><h4 class="cs-h">Metrics &amp; Impact</h4><p><span class="de" lang="de">Der Trailer läuft als Collab mit dem Lehmann Club (54,9k Follower): <span class="stat">39.497</span> Aufrufe, 23.027 Reichweite, rund 851 Interaktionen und <span class="stat">14</span> neue Follower in den ersten vier Tagen.</span><span class="en" lang="en">The trailer runs as a collab with Lehmann Club (54.9k followers): <span class="stat">39,497</span> views, 23,027 reach, around 851 interactions and <span class="stat">14</span> new followers in the first four days.</span></p></div></div>
+    <div class="keys"><span class="key">Creative Direction</span><span class="key">Szenenplanung</span><span class="key">Personal Assistance</span><span class="key">BTS Content</span><span class="key">Video Editing</span></div>
+    <p class="linkbar"><span class="label">Verlinkungen</span><span class="lk"><i><span class="de" lang="de">Kanal</span><span class="en" lang="en">Channel</span></i><a class="ilink" href="https://www.instagram.com/visionekstase/">@visionekstase</a></span> &middot; <span class="lk"><i><span class="de" lang="de">Collab</span><span class="en" lang="en">Collab</span></i><a class="ilink" href="https://www.instagram.com/lehmannclubstuttgart/">@lehmannclubstuttgart</a></span> &middot; <span class="lk"><i><span class="de" lang="de">Creative Direction</span><span class="en" lang="en">Creative direction</span></i><a class="ilink" href="https://www.instagram.com/genalireth.ve/">@genalireth.ve</a> &amp; <a class="ilink" href="https://www.instagram.com/oceansphotography.ve/">@oceansphotography.ve</a></span> &middot; <span class="lk"><i><span class="de" lang="de">Videografie &amp; Schnitt</span><span class="en" lang="en">Videography &amp; edit</span></i><a class="ilink" href="https://www.instagram.com/phillprp/">@phillprp</a></span></p>
+  </article>
+
+  <article class="case" id="vision-ekstase" data-skills="social content">
+    <div class="case-head"><div class="case-meta"><span class="label"><span class="de" lang="de">August</span><span class="en" lang="en">August</span> 2026 · Stuttgart</span></div>
+      <h3 class="case-title">Vision Ekstase Open Air · Social Media Lead</h3></div>
+    <div class="brandbar"><img class="bb-sym" src="media/vision-ekstase_symbol.png" alt="Vision Ekstase Symbol">
+      <span class="bb-rule"></span><img class="bb-logo" src="media/vision-ekstase_logo.png" alt="Vision Ekstase Logo"></div>
+    <div class="strip">
+      <figure class="phone"><div class="phone-body"><video src="media/vision-ekstase_01_promo.mp4" poster="media/vision-ekstase_01_promo_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption><span class="de" lang="de">Promo Video</span><span class="en" lang="en">Promo video</span></figcaption></figure><figure class="phone"><div class="phone-body"><video src="media/vision-ekstase_02.mp4" poster="media/vision-ekstase_02_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption><span class="de" lang="de">Story Content 1 · DJ-Set B2B</span><span class="en" lang="en">Story content 1 · DJ set B2B</span></figcaption></figure><figure class="phone"><div class="phone-body"><video src="media/vision-ekstase_03.mp4" poster="media/vision-ekstase_03_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption><span class="de" lang="de">Story Content 2 · Live Painting</span><span class="en" lang="en">Story content 2 · live painting</span></figcaption></figure><figure class="phone"><div class="phone-body"><video src="media/vision-ekstase_04.mp4" poster="media/vision-ekstase_04_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption><span class="de" lang="de">Story Content 3 · Gäste vor Ort</span><span class="en" lang="en">Story content 3 · guests on site</span></figcaption></figure><figure class="phone"><div class="phone-body shot-body"><img src="media/vision-ekstase_07_nachher.jpg" alt="Fertiges Bild von Lucas Schänzlin am Abend"></div><figcaption><span class="de" lang="de">Story Content 4 · Fertiges Bild am Abend</span><span class="en" lang="en">Story content 4 · finished painting at night</span></figcaption></figure>
+    </div>
+    <p class="case-lead"><a class="ilink" href="https://www.instagram.com/visionekstase/">@visionekstase</a> <span class="de" lang="de">ist eine etablierte Veranstaltungsreihe aus dem Umfeld des</span><span class="en" lang="en">is an established event series from the circle of</span> <a class="ilink" href="https://www.instagram.com/lehmannclubstuttgart/">@lehmannclubstuttgart</a> <span class="de" lang="de">und zählt zu den festen Größen für Subkultur- und Clubevents in Stuttgart. Einmal im Jahr hostet Vision Ekstase ein Open-Air-Dayevent, das dieses Jahr im Höhenpark Killesberg stattfand, mit rund <strong>1.000 Besucher:innen</strong>.</span><span class="en" lang="en">and one of the fixed names for subculture and club events in Stuttgart. Once a year Vision Ekstase hosts an open air day event, this year at Höhenpark Killesberg, with around <strong>1,000 guests</strong>.</span></p>
+    <div class="cs-grid"><div class="cs-box"><h4 class="cs-h">Objective</h4><p><span class="de" lang="de">Angefragt für das Social-Media-Team des Open Airs, um Content für Reichweite und Followerwachstum zu drehen. Dazu ein Materialarchiv für künftige Formate.</span><span class="en" lang="en">Brought in for the open air&rsquo;s social media team to shoot content for reach and follower growth. Plus an archive of material for future formats.</span></p></div><div class="cs-box"><h4 class="cs-h">Approach</h4><p><span class="de" lang="de">Das Open-Air-Feeling visuell im Story-Content rüberbringen, um das Event selbst als Produkt zu vermarkten. Live-Ausspielung während der Veranstaltung statt vorproduzierter Ankündigung, um einen FOMO-Effekt zu erzeugen. Story-Design vorab festgelegt, Story-Inhalte am Eventtag in Eigenverantwortung.</span><span class="en" lang="en">Carry the open air feeling visually through the story content, to market the event itself as a product. Publishing live during the event instead of pre-produced announcements, to create FOMO. Story design fixed in advance, story content on the day under my own responsibility.</span></p></div><div class="cs-box"><h4 class="cs-h">Execution</h4><p><span class="de" lang="de">Promo-Shoot von Konzept bis Aufnahme. Redaktionsplan für den Eventtag mit der Veranstalterin erstellt sowie Story-Design festgelegt. Am Tag selbst zehn Stunden durchgehend vor der Kamera moderiert, geschnitten und Live-Content ausgespielt. Schnitt in CapCut, Grafik in Canva.</span><span class="en" lang="en">Promo shoot from concept to filming. Editorial plan for the event day built with the organiser, plus the story design. On the day itself ten hours straight of hosting on camera, editing and publishing live content. Edited in CapCut, graphics in Canva.</span></p></div><div class="cs-box"><h4 class="cs-h">Metrics &amp; Impact</h4><p><span class="de" lang="de">Promo-Reel <span class="stat">50.728</span> Aufrufe, 790 Likes, 36 Reposts. Über 20 Live-Stories mit je 2.900 bis 5.300 Aufrufen. <span class="stat">384</span> neue Follower im Eventzeitraum. Erneute Anfrage für eine Videodreh-Produktion im September.</span><span class="en" lang="en">Promo reel <span class="stat">50,728</span> views, 790 likes, 36 reposts. Over 20 live stories at 2,900 to 5,300 views each. <span class="stat">384</span> new followers during the event period. Booked again for a video production in September.</span></p></div></div>
+    <div class="keys"><span class="key">Social Media Lead</span><span class="key">Live Content</span><span class="key">Redaktionsplanung</span><span class="key">Moderation</span></div>
+    <p class="linkbar"><span class="label">Verlinkungen</span><span class="lk"><i><span class="de" lang="de">Kanal</span><span class="en" lang="en">Channel</span></i><a class="ilink" href="https://www.instagram.com/visionekstase/">@visionekstase</a></span> &middot; <span class="lk"><i><span class="de" lang="de">Club</span><span class="en" lang="en">Club</span></i><a class="ilink" href="https://www.instagram.com/lehmannclubstuttgart/">@lehmannclubstuttgart</a></span></p>
+  </article>
+
+  <article class="case" id="schaenzlin" data-skills="social">
+    <div class="case-head"><div class="case-meta"><span class="label"><span class="de" lang="de">laufend seit April 2026</span><span class="en" lang="en">ongoing since April 2026</span></span></div>
+      <h3 class="case-title">Atelier Schänzlin · Social Media Management</h3></div>
+    <div class="strip">
+      <figure class="phone"><div class="phone-body"><video src="media/schaenzlin_01_live-painting.mp4" poster="media/schaenzlin_01_live-painting_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption><span class="de" lang="de">Live Painting</span><span class="en" lang="en">Live painting</span></figcaption></figure>
+      <figure class="phone"><div class="phone-body"><video src="media/schaenzlin_02_artist-portrait.mp4" poster="media/schaenzlin_02_artist-portrait_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption><span class="de" lang="de">Artist Portrait</span><span class="en" lang="en">Artist portrait</span></figcaption></figure>
+    </div>
+    <p class="case-lead"><a class="ilink" href="https://www.instagram.com/atelier.schaenzlin/">@atelier.schaenzlin</a><span class="de" lang="de">, alias <strong>Lukas Schänzlin</strong>, ist Pop-Surrealism-Künstler aus Stuttgart und etabliert sich in der lokalen Subkulturszene, unter anderem als Live-Painter auf Events.</span><span class="en" lang="en">, aka <strong>Lukas Schänzlin</strong>, is a pop surrealism artist from Stuttgart who is establishing himself in the local subculture scene, among other things as a live painter at events.</span></p>
+    <div class="cs-grid"><div class="cs-box"><h4 class="cs-h">Objective</h4><p><span class="de" lang="de">Bei Übernahme der Kanäle im April: unregelmäßige Veröffentlichungen, ungenutztes Video- und Bildmaterial, das nie hochgeladen wurde, verfehlte Reichweitenziele und eine Auftragslage, die ihm durch die geringe Sichtbarkeit zu dünn war. Ziel: Sichtbarkeit aufbauen, aus der Anfragen für seine Kunst entstehen.</span><span class="en" lang="en">When I took over the channels in April: irregular posting, unused video and image material that never went up, reach targets missed, and a booking situation he found too thin because of the low visibility. The goal: build visibility that turns into enquiries for his art.</span></p></div><div class="cs-box"><h4 class="cs-h">Approach</h4><p><span class="de" lang="de">Ein noch unentdeckter Künstler braucht beides: Reichweite bei Fremden und eine Community, die bleibt. Dafür mehr dynamische Reels, Bildunterschriften, die zur Interaktion einladen, und ein verlässlicher Rhythmus. Dazu vorhandenes, nie genutztes Material zu Content entwickeln.</span><span class="en" lang="en">An artist nobody knows yet needs both: reach among strangers and a community that stays. That means more dynamic reels, captions that invite interaction, and a reliable rhythm. Plus turning existing, never used material into content.</span></p></div><div class="cs-box"><h4 class="cs-h">Execution</h4><p><span class="de" lang="de">Laufender Contentplan seit April mit zwei Beiträgen pro Woche, dazu Story-Content. Schnitt und Bearbeitung von bestehendem und neu aufgenommenem Videomaterial, Redaktionsplanung und Publishing sämtlicher Beiträge auf Instagram und TikTok. CapCut und Canva.</span><span class="en" lang="en">A running content plan since April with two posts a week, plus story content. Editing and post-production of existing and newly shot video material, editorial planning and publishing of every post on Instagram and TikTok. CapCut and Canva.</span></p></div><div class="cs-box"><h4 class="cs-h">Metrics &amp; Impact</h4><p><span class="de" lang="de"><span class="stat">50.742</span> Aufrufe in 90 Tagen, 51,9&nbsp;% davon von Nicht-Followern. Stärkster Beitrag <span class="stat">9.611</span> Aufrufe und 21 neue Follower. Zuletzt <span class="stat">8.774</span> Reichweite auf einen Bildbeitrag und 2.953 auf ein Reel. Das Mandat läuft seit April durchgehend weiter.</span><span class="en" lang="en"><span class="stat">50,742</span> views in 90 days, 51.9&nbsp;% of them from non-followers. Strongest post <span class="stat">9,611</span> views and 21 new followers. Most recently <span class="stat">8,774</span> reach on an image post and 2,953 on a reel. The mandate has been running continuously since April.</span></p></div></div>
+    <div class="keys"><span class="key">Social Media Management</span><span class="key">Redaktionsplanung</span><span class="key">Video Editing</span><span class="key">Publishing</span></div>
+    <p class="linkbar"><span class="label">Verlinkungen</span><span class="lk"><i>Instagram</i><a class="ilink" href="https://www.instagram.com/atelier.schaenzlin/">@atelier.schaenzlin</a></span> &middot; <span class="lk"><i>TikTok</i><a class="ilink" href="https://www.tiktok.com/@schaenzlin.art">@schaenzlin.art</a></span></p>
+  </article>
+
+  <article class="case" id="gude-zeit" data-skills="social">
+    <div class="case-head"><div class="case-meta"><span class="label"><span class="de" lang="de">seit</span><span class="en" lang="en">since</span> September 2025 · Stuttgart</span></div>
+      <h3 class="case-title">Gude Zeit Kollektiv · <span class="de" lang="de">Mitgründerin</span><span class="en" lang="en">Co-founder</span> &amp; Community Building</h3></div>
+    <div class="brandbar">
+      <img class="bb-mark" src="media/gude-zeit_02_logo.jpg" alt="Logo Gude Zeit Kollektiv">
+      <span class="bb-rule"></span>
+    </div>
+    <div class="strip">
+      <figure class="phone"><div class="phone-body"><video src="media/gude-zeit_01_kanal.mp4" poster="media/gude-zeit_01_kanal_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption><span class="de" lang="de">Instagram-Kanal</span><span class="en" lang="en">Instagram channel</span></figcaption></figure>
+      <figure class="tile"><img src="media/gude-zeit_03_flyer.jpg" alt="Veranstaltungsflyer Trance am Tresen">
+        <figcaption><span class="de" lang="de">Event-Ank&uuml;ndigung</span><span class="en" lang="en">Event announcement</span></figcaption></figure>
+    </div>
+    <p class="case-lead"><a class="ilink" href="https://www.instagram.com/gudezeit.kollektiv/">@gudezeit.kollektiv</a> <span class="de" lang="de">ist ein ehrenamtliches Musikkollektiv aus Stuttgart mit eigenen Veranstaltungsformaten. Neben selbst organisierten Veranstaltungsreihen Auftritte bei der <strong>Tanzdemo Stuttgart</strong> und der <strong>Langen Nacht der Museen</strong>.</span><span class="en" lang="en">is a volunteer music collective from Stuttgart with its own event formats. Alongside self-organised event series, appearances at <strong>Tanzdemo Stuttgart</strong> and <strong>Lange Nacht der Museen</strong>.</span></p>
+    <div class="cs-grid"><div class="cs-box"><h4 class="cs-h">Objective</h4><p><span class="de" lang="de">Mit der Neugründung kam die Aufgabe, Reichweite und Aufmerksamkeit für die eigenen Veranstaltungen zu erzeugen. Dafür wurde nicht nur der Kanal von Grund auf aufgebaut, sondern zuerst eine eigene Brand Identity entwickelt: Symbol, Farben, Bildsprache. Ziel: Veranstaltungen füllen und die Haltung des Kollektivs sichtbar machen, ohne Werbebudget.</span><span class="en" lang="en">Founding the collective came with the task of creating reach and attention for our own events. So we did not just build the channel from scratch, we first developed a brand identity: symbol, colours, visual language. The goal: fill events and make what the collective stands for visible, without an advertising budget.</span></p></div><div class="cs-box"><h4 class="cs-h">Approach</h4><p><span class="de" lang="de">No-Budget-Veranstaltungen gewinnen Reichweite über Empfehlung und Weiterleitung, also über die kostenfreien Wege Instagram und WhatsApp. Die Ankündigungen sollen deshalb nicht nur auf die Veranstaltung aufmerksam machen, sondern die Werte des Kollektivs mittransportieren, mit festem visuellem Wiedererkennungswert.</span><span class="en" lang="en">No budget events gain reach through recommendation and forwarding, which means through the free routes, Instagram and WhatsApp. So the announcements should not only draw attention to the event, they should carry the values of the collective with them, with a fixed visual signature.</span></p></div><div class="cs-box"><h4 class="cs-h">Execution</h4><p><span class="de" lang="de">Kanalaufbau im Team, laufend Community Management und Redaktionsplanung. Schnitt in CapCut, Grafiken und Brand Identity in Canva, dazu ein Canva-Template für ein durchgehend einheitliches Design.</span><span class="en" lang="en">Building the channel as a team, ongoing community management and editorial planning. Editing in CapCut, graphics and brand identity in Canva, plus a Canva template for a consistent look throughout.</span></p></div><div class="cs-box"><h4 class="cs-h">Metrics &amp; Impact</h4><p><span class="de" lang="de"><span class="stat">957</span> Follower bei 35 Beiträgen, von Beginn an aufgebaut. Seit der ersten Party waren alle Veranstaltungen gut besucht, mehrfach mit Einlassstopp.</span><span class="en" lang="en"><span class="stat">957</span> followers across 35 posts, built up from the start. Since the first party every event has been well attended, several times at capacity.</span></p></div></div>
+    <div class="keys"><span class="key">Community Building</span><span class="key">Brand Identity</span><span class="key">Eventkommunikation</span><span class="key">Kanalstrategie</span></div>
+    <p class="linkbar"><span class="label">Verlinkungen</span><span class="lk"><i><span class="de" lang="de">Kanal</span><span class="en" lang="en">Channel</span></i><a class="ilink" href="https://www.instagram.com/gudezeit.kollektiv/">@gudezeit.kollektiv</a></span></p>
+  </article>
+</section>
+
+
+<!-- ================================================================= -->
+<!--  NEUES PROJEKT HINZUFUEGEN                                        -->
+<!--  1. Den Block zwischen den Sternchen kopieren                     -->
+<!--  2. Ueber diesen Kommentar einfuegen (dann steht es ganz unten)   -->
+<!--     oder weiter oben zwischen zwei bestehende <article>-Bloecke   -->
+<!--  3. Datum, Titel, Teaser und Text ersetzen                        -->
+<!--  4. Videos in den Ordner media/ legen und unten die Dateinamen    -->
+<!--     eintragen. Vorschaubild ist freiwillig.                       -->
+<!-- ================================================================= -->
+<!-- ***** ANFANG VORLAGE *****
+  <article class="case">
+    <div class="case-head"><div class="case-meta"><span class="label">MONAT JAHR &middot; ORT</span></div>
+      <h3 class="case-title">PROJEKTNAME &middot; WAS ES WAR &middot; MEINE ROLLE</h3></div>
+
+    <div class="strip">
+      <figure class="phone"><div class="phone-body">
+        <video src="media/DEIN-VIDEO-1.mp4" autoplay muted loop playsinline preload="none"></video>
+      </div><figcaption>BILDUNTERSCHRIFT</figcaption></figure>
+      <figure class="phone"><div class="phone-body">
+        <video src="media/DEIN-VIDEO-2.mp4" autoplay muted loop playsinline preload="none"></video>
+      </div></figure>
+      <figure class="phone"><div class="phone-body shot-body">
+        <img src="media/DEIN-BILD.jpg" alt="BESCHREIBUNG">
+      </div><figcaption>BILDUNTERSCHRIFT</figcaption></figure>
+    </div>
+
+    <p class="case-lead">EINSTIEGSTEXT: wer war der Kunde, was war das Projekt.
+      Namen als Link: <a class="ilink" href="https://www.instagram.com/HANDLE/">@HANDLE</a></p>
+
+    <div class="cs-grid">
+      <div class="cs-box"><h4 class="cs-h">Objective</h4>
+        <p>Was war die Ausgangslage, was war das Ziel.</p></div>
+      <div class="cs-box"><h4 class="cs-h">Approach</h4>
+        <p>Welche Ueberlegung stand dahinter, welche Strategie.</p></div>
+      <div class="cs-box"><h4 class="cs-h">Execution</h4>
+        <p>Was hast du konkret gemacht, mit welchen Tools.</p></div>
+      <div class="cs-box"><h4 class="cs-h">Metrics &amp; Impact</h4>
+        <p>Zahlen und Ergebnis. Zahl hervorheben:
+          <span class="stat">12.345</span> Aufrufe.</p></div>
+    </div>
+
+    <div class="keys"><span class="key">SCHLAGWORT</span><span class="key">SCHLAGWORT</span></div>
+
+    <p class="brands"><span class="label">Marken im Shooting</span>MARKE &middot; MARKE &middot; MARKE</p>
+
+    <div class="linkbar"><span class="label">Verlinkungen</span>
+      <dl class="factbar">
+        <div><dt>Instagram</dt><dd><a class="ilink" href="https://www.instagram.com/HANDLE/">@HANDLE</a></dd></div>
+        <div><dt>TikTok</dt><dd><a class="ilink" href="https://www.tiktok.com/@HANDLE">@HANDLE</a></dd></div>
+      </dl>
+    </div>
+  </article>
+***** ENDE VORLAGE ***** -->
+
+<section id="eigenes" data-skills="content">
+  <div class="sec-head"><span class="label">03 · Visual Diary</span>
+    <h2 class="sec-title">Visual Diary &amp; Content Creation</h2>
+  </div>
+  <div class="strip">
+    <figure class="phone"><div class="phone-body"><video src="media/kanal_02_ootd.mp4" poster="media/kanal_02_ootd_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption>Outfit of the Day</figcaption></figure>
+    <figure class="phone"><div class="phone-body"><video src="media/kanal_03_coffee.mp4" poster="media/kanal_03_coffee_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption>Coffee Routine</figcaption></figure>
+    <figure class="phone"><div class="phone-body"><video src="media/kanal_04_aesthetic.mp4" poster="media/kanal_04_aesthetic_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption>Aesthetic Video</figcaption></figure>
+    <figure class="phone"><div class="phone-body"><video src="media/kanal_01_grwm.mp4" poster="media/kanal_01_grwm_vorschau.jpg" autoplay muted loop playsinline preload="none"></video><button class="snd" type="button" aria-label="Ton einschalten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="i-off" d="M11 5 6 9H2v6h4l5 4z"/><line class="i-off" x1="22" y1="9" x2="16" y2="15"/><line class="i-off" x1="16" y1="9" x2="22" y2="15"/><path class="i-on" d="M11 5 6 9H2v6h4l5 4z"/><path class="i-on" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="i-on" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></div><figcaption>Get Ready With Me</figcaption></figure>
+  </div>
+  <p class="case-lead"><a class="ilink" href="https://www.tiktok.com/@itsrosalinacelestino">@itsrosalinacelestino</a> <span class="de" lang="de">ist mein eigener Kanal, auf dem ich mich ästhetisch online zeige und der als mein visuelles Tagebuch dient. Hier trainiere ich mein kreatives Outlet und meine Social-Media-Skills.</span><span class="en" lang="en">is my own social media channel, where I portray myself artistically online and which serves as my aesthetic visual diary. It is the place where I train my creative outlet and my social media skills.</span></p>
+  <div class="cs-grid"><div class="cs-box"><h4 class="cs-h">Objective</h4><p><span class="de" lang="de">Social Media Management und Content Creation an eigenen visuellen Ideen erproben. Dazu die eigene Ästhetik verfeinern und verstehen, wie der TikTok-Algorithmus arbeitet.</span><span class="en" lang="en">Test social media management and content creation on my own visual ideas. And refine my own aesthetic while understanding how the TikTok algorithm works.</span></p></div><div class="cs-box"><h4 class="cs-h">Approach</h4><p><span class="de" lang="de">Wer selbst postet, kann eigene Trendanalysen fahren. So trainiere ich nicht nur das visuelle Auge, sondern lerne, wie Reichweite auf der Plattform entsteht, und setze das in Arbeiten für andere ein.</span><span class="en" lang="en">Posting yourself means you can run your own trend analysis. That way I train not only the visual eye but learn how reach is built on the platform, and put it to use in work for others.</span></p></div><div class="cs-box"><h4 class="cs-h">Execution</h4><p><span class="de" lang="de">Konzept, Dreh, Schnitt, Publishing, Performance-Analyse. CapCut und der TikTok-eigene Schnitt.</span><span class="en" lang="en">Concept, shooting, editing, publishing, performance analysis. CapCut and TikTok&rsquo;s own editor.</span></p></div><div class="cs-box"><h4 class="cs-h">Metrics &amp; Impact</h4><p><span class="de" lang="de"><span class="stat">37.300</span> Zuschauer:innen in 28 Tagen, davon <span class="stat">35.900</span> neu. Stärkstes Video <span class="stat">29.300</span> Aufrufe bei 7.683 Likes, eine Like-Quote von 26&nbsp;%. Zuletzt ein Video mit <span class="stat">20.600</span> Aufrufen, 3.711 Likes, 433 Weiterleitungen und 638 Speicherungen. Das Publikum ist zu 86&nbsp;% weiblich und zu 87&nbsp;% unter 35.</span><span class="en" lang="en"><span class="stat">37,300</span> viewers in 28 days, <span class="stat">35,900</span> of them new. Strongest video <span class="stat">29,300</span> views at 7,683 likes, a like rate of 26&nbsp;%. Most recently a video with <span class="stat">20,600</span> views, 3,711 likes, 433 shares and 638 saves. The audience is 86&nbsp;% female and 87&nbsp;% under 35.</span></p></div></div>
+</section>
+
+
+<section id="werdegang">
+  <div class="sec-head"><span class="label">04 · <span class="de" lang="de">Über mich</span><span class="en" lang="en">About me</span></span>
+    <h2 class="sec-title"><span class="de" lang="de">Werdegang &amp; Skills</span><span class="en" lang="en">Background &amp; Skills</span></h2>
+  </div>
+  <div class="cv-single">
+    <div>
+      <p class="sk-h"><span class="de" lang="de">Ausbildung</span><span class="en" lang="en">Education</span></p>
+      <div class="cv-list">
+        <div class="cv-row"><div class="cv-what"><b><span class="de" lang="de">Weiterbildung Social-Media-Marketing, Social Ads und Prompt Engineering</span><span class="en" lang="en">Continuing education in Social Media Marketing, Social Ads and Prompt Engineering</span></b><span>IU Akademie</span></div><span class="cv-when"><span class="de" lang="de">2026 bis 2027, 12 Wochen</span><span class="en" lang="en">2026 to 2027, 12 weeks</span></span></div>
+        <div class="cv-row"><div class="cv-what"><b>B. A. Digital Business Management</b><span>Duale Hochschule Baden-Württemberg Stuttgart</span></div><span class="cv-when"><span class="de" lang="de">2022 bis 2025</span><span class="en" lang="en">2022 to 2025</span></span></div>
+        <div class="cv-row"><div class="cv-what"><b><span class="de" lang="de">Kauffrau für audiovisuelle Medien</span><span class="en" lang="en">Audiovisual Media Management, vocational degree</span></b><span>Johann-Friedrich-von-Cotta-Schule, Stuttgart</span></div><span class="cv-when"><span class="de" lang="de">2019 bis 2022</span><span class="en" lang="en">2019 to 2022</span></span></div>
+              </div>
+    </div>
+    <div>
+      <p class="sk-h"><span class="de" lang="de">Berufserfahrung</span><span class="en" lang="en">Experience</span></p>
+      <div class="cv-list">
+        <div class="cv-row"><div class="cv-what"><b>Program &amp; Project Management Associate</b><span>Accenture Song Content Germany, Stuttgart</span></div><span class="cv-when"><span class="de" lang="de">2022 bis 2025</span><span class="en" lang="en">2022 to 2025</span></span></div>
+        <div class="cv-row"><div class="cv-what"><b>Client Account Management Associate</b><span>Accenture Song Content Germany, Stuttgart</span></div><span class="cv-when">2022</span></div>
+        <div class="cv-row"><div class="cv-what"><b>Program &amp; Project Management Associate</b><span><span class="de" lang="de">Mackevision, Teil von Accenture Song</span><span class="en" lang="en">Mackevision, part of Accenture Song</span></span></div><span class="cv-when"><span class="de" lang="de">2019 bis 2022</span><span class="en" lang="en">2019 to 2022</span></span></div>
+        <div class="cv-row"><div class="cv-what"><b><span class="de" lang="de">Praktikum Social Media &amp; Event Booking</span><span class="en" lang="en">Internship Social Media &amp; Event Booking</span></b><span>Elipamanoke Club, Leipzig</span></div><span class="cv-when"><span class="de" lang="de">2018 bis 2019</span><span class="en" lang="en">2018 to 2019</span></span></div>
+      </div>
+    </div>
+  </div>
+  <div class="skills">
+    <p class="sk-h">Hard Skills</p>
+    <div class="sk-groups">
+      <div class="sk-list">
+        <div class="sk-row"><b>Social Media Management</b><span class="sk-lvl">Advanced<span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="sk-row"><b><span class="de" lang="de">Redaktionsplanung &amp; Content-Strategie</span><span class="en" lang="en">Editorial Planning &amp; Content Strategy</span></b><span class="sk-lvl">Advanced<span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="sk-row"><b><span class="de" lang="de">Content Creation, Video &amp; Foto</span><span class="en" lang="en">Content Creation, Video &amp; Photo</span></b><span class="sk-lvl">Advanced<span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="sk-row"><b>Video Editing</b><span class="sk-lvl">Advanced<span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="sk-row"><b>Community Management</b><span class="sk-lvl">Advanced<span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="sk-row"><b>Visual Storytelling</b><span class="sk-lvl">Advanced<span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+      </div>
+      <div class="sk-list">
+        <div class="sk-row"><b><span class="de" lang="de">Projekt- &amp; Programmmanagement</span><span class="en" lang="en">Project &amp; Programme Management</span></b><span class="sk-lvl">Advanced<span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="sk-row"><b><span class="de" lang="de">Performance-Analyse &amp; KPI-Tracking</span><span class="en" lang="en">Performance Analysis &amp; KPI Tracking</span></b><span class="sk-lvl">Advanced<span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="sk-row"><b>Creative Direction</b><span class="sk-lvl">Intermediate<span class="dots"><i class="on"></i><i class="on"></i><i></i></span></span></div>
+        <div class="sk-row"><b><span class="de" lang="de">Set- &amp; Produktionsassistenz</span><span class="en" lang="en">Set &amp; Production Assistance</span></b><span class="sk-lvl">Intermediate<span class="dots"><i class="on"></i><i class="on"></i><i></i></span></span></div>
+        <div class="sk-row"><b><span class="de" lang="de">Moderation, On-Camera</span><span class="en" lang="en">Hosting, On Camera</span></b><span class="sk-lvl">Intermediate<span class="dots"><i class="on"></i><i class="on"></i><i></i></span></span></div>
+        <div class="sk-row"><b><span class="de" lang="de">Grafik &amp; Brand Identity</span><span class="en" lang="en">Graphics &amp; Brand Identity</span></b><span class="sk-lvl">Intermediate<span class="dots"><i class="on"></i><i class="on"></i><i></i></span></span></div>
+      </div>
+    </div>
+
+    <p class="tools"><span class="label">Tools</span>CapCut · Premiere Pro · Final Cut Pro · Lightroom · Canva · Meta Ads · TikTok Ads · Jira · Salesforce · HubSpot · Power BI · GitHub &amp; Vercel</p>
+
+    <p class="tools"><span class="label">Soft Skills</span><span class="de" lang="de">Organisation &amp; Ownership · Kommunikation &amp; Networking · Belastbarkeit &amp; Hands-on-Mentalität · Ästhetisches Gespür &amp; Detailblick</span><span class="en" lang="en">Organisation &amp; Ownership · Communication &amp; Networking · Resilience &amp; Hands-on Mentality · Eye for Aesthetics &amp; Detail</span></p>
+  </div>
+</section>
+
+<div class="closing">
+  <div class="band-in">
+    <span class="label">05 · Passion</span>
+    <div class="pass-grid">
+    <div class="pass-text">
+      <p class="pass-lead"><span class="de" lang="de">Ich finde Ästhetik und Inspiration selbst in den kleinsten Dingen.</span><span class="en" lang="en">I find aesthetics and inspiration in the smallest things.</span></p>
+      <p class="pass-p"><span class="de" lang="de">Ob in der Natur, in Mode, in Kunst, in Architektur oder den Menschen um mich herum. Ich finde immer eine Möglichkeit, Dinge neu zu inszenieren.</span><span class="en" lang="en">In nature, in fashion, in art, in architecture, in the people around me. I always find a way to stage things in a new light.</span></p>
+      <p class="pass-p"><span class="de" lang="de">Zu kreieren treibt mich jeden Tag an. Dass ich das darf, ist für mich nie selbstverständlich. In Zukunft möchte ich noch viele weitere Ideen umsetzen und meiner Generation, meiner Szene und meiner Kultur etwas zurückgeben.</span><span class="en" lang="en">Creating is what drives me every day. That I get to do it is something I never take for granted. In the future I want to realise many more ideas and give something back to my generation, my scene and my culture.</span></p>
+    </div>
+    <figure class="mood">
+      <div class="mood-body">
+        <video src="media/passion_moodboard.mp4" poster="media/passion_moodboard_vorschau.jpg" autoplay muted loop playsinline preload="none"></video>
+      </div>
+    </figure>
+    </div>
+  </div>
+</div>
+
+<section id="kontakt">
+  <div class="sec-head"><span class="label">06 · <span class="de" lang="de">Kontakt</span><span class="en" lang="en">Contact</span></span></div>
+  <p class="contact-claim">Let&rsquo;s work<br>together.</p>
+  <div class="contact-btns" style="margin-bottom:2rem;">
+    <a class="cbtn cbtn--hot" href="mailto:rosalina.celestino@gmx.de"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>rosalina.celestino@gmx.de</a>
+    <a class="cbtn" href="tel:+491737044492"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>+49 173 7044492</a>
+  </div>
+  <div class="contact-rows">
+    <a class="crow" href="https://www.tiktok.com/@itsrosalinacelestino"><span class="label">TikTok</span><span class="crow-v">@itsrosalinacelestino</span></a>
+    <a class="crow" href="https://www.instagram.com/itsrosalinacelestino/"><span class="label">Instagram</span><span class="crow-v">@itsrosalinacelestino</span></a>
+    <a class="crow" href="https://www.linkedin.com/in/rosalina-patricia-celestino-a575b8159"><span class="label">LinkedIn</span><span class="crow-v">Rosalina Patricia Celestino</span></a>
+  </div>
+</section>
+<footer><span class="label">Rosalina Patricia Celestino</span><span class="label">2026</span></footer>
+</div>
+
+<script>
+(function(){
+  var h = document.getElementById("wordmark");
+  if(!h) return;
+  function fit(){
+    var box = h.parentElement.clientWidth;
+    if(!box) return;
+    h.style.fontSize = "100px";
+    var w = h.scrollWidth;
+    if(!w) return;
+    var size = Math.min(100 * box / w, 118);
+    h.style.fontSize = size.toFixed(2) + "px";
+  }
+  fit();
+  window.addEventListener("resize", fit);
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  window.addEventListener("load", fit);
+})();
+(function(){
+  function toBlob(v){
+    var src = v.getAttribute("src") || "";
+    if(src.indexOf("data:") !== 0 || v.dataset.blobbed) return;
+    v.dataset.blobbed = "1";
+    try{
+      var komma = src.indexOf(",");
+      var typ = src.slice(5, src.indexOf(";"));
+      var roh = atob(src.slice(komma + 1));
+      var buf = new Uint8Array(roh.length);
+      for(var i = 0; i < roh.length; i++) buf[i] = roh.charCodeAt(i);
+      var url = URL.createObjectURL(new Blob([buf], {type: typ}));
+      v.setAttribute("src", url);
+      v.load();
+      if(v.autoplay) v.play().catch(function(){});
+    }catch(e){}
+  }
+  document.querySelectorAll("video").forEach(function(v){
+    v.addEventListener("error", function(){ toBlob(v); }, {once:true});
+  });
+})();
+(function(){
+  var pfeil = {
+    links: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>',
+    rechts: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>'
+  };
+  document.querySelectorAll(".strip").forEach(function(strip){
+    var wrap = document.createElement("div");
+    wrap.className = "strip-wrap";
+    strip.parentNode.insertBefore(wrap, strip);
+    wrap.appendChild(strip);
+    function knopf(richtung, klasse, glyph, titel){
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "snav " + klasse;
+      b.setAttribute("aria-label", titel); b.innerHTML = glyph;
+      b.addEventListener("click", function(){
+        var karte = strip.firstElementChild;
+        var schritt = karte ? karte.getBoundingClientRect().width + 14 : strip.clientWidth * 0.8;
+        strip.scrollBy({left: richtung * schritt, behavior: "smooth"});
+      });
+      wrap.appendChild(b);
+      return b;
+    }
+    var zurueck = knopf(-1, "snav--prev", pfeil.links, "Vorheriges Video");
+    var weiter  = knopf( 1, "snav--next", pfeil.rechts, "Nächstes Video");
+    function pruefe(){
+      var rest = strip.scrollWidth - strip.clientWidth;
+      wrap.classList.toggle("has-nav", rest > 8);
+      zurueck.disabled = strip.scrollLeft <= 2;
+      weiter.disabled  = strip.scrollLeft >= rest - 2;
+    }
+    strip.addEventListener("scroll", pruefe, {passive: true});
+    window.addEventListener("resize", pruefe);
+    pruefe(); setTimeout(pruefe, 400); setTimeout(pruefe, 1500);
+  });
+})();
+(function(){
+  if(!("IntersectionObserver" in window)) return;
+  var beobachter = new IntersectionObserver(function(eintraege){
+    eintraege.forEach(function(e){
+      var v = e.target;
+      if(e.isIntersecting){ if(v.paused) v.play().catch(function(){}); }
+      else if(!v.paused && v.muted){ v.pause(); }
+    });
+  }, {rootMargin: "120px", threshold: 0.15});
+  document.querySelectorAll("video").forEach(function(v){ beobachter.observe(v); });
+})();
+(function(){
+  var leiste = document.getElementById("filterbar");
+  if(!leiste) return;
+  var text   = leiste.querySelector(".fb-text");
+  var knopf  = leiste.querySelector(".fb-reset");
+  var ziele  = document.querySelectorAll("[data-skills]");
+  var rollen = document.querySelectorAll(".role-btn");
+
+  function titelVon(el){
+    var t = el.querySelector(".case-title") || el.querySelector(".sec-title");
+    return t ? t.innerHTML.trim() : "Projekt";
+  }
+  function passt(el, rolle){
+    return (el.dataset.skills || "").split(" ").indexOf(rolle) > -1;
+  }
+
+  // Menues einmalig aus dem Dokument bauen
+  rollen.forEach(function(btn){
+    var menue = btn.parentElement.querySelector(".role-menu");
+    var rolle = btn.dataset.rolle;
+    ziele.forEach(function(z){
+      if(!passt(z, rolle)) return;
+      if(!z.id) return;
+      var a = document.createElement("a");
+      a.href = "#" + z.id;
+      a.innerHTML = titelVon(z);
+      menue.appendChild(a);
+    });
+  });
+
+  function menuesZu(){
+    rollen.forEach(function(b){
+      b.setAttribute("aria-expanded", "false");
+      b.parentElement.querySelector(".role-menu").classList.remove("on");
+    });
+  }
+  function zuruecksetzen(){
+    menuesZu();
+    leiste.classList.remove("on");
+    ziele.forEach(function(z){ z.classList.remove("case--hit","dimmed"); });
+  }
+  function filtern(rolle, name){
+    var treffer = 0;
+    ziele.forEach(function(z){
+      var ja = passt(z, rolle);
+      z.classList.toggle("case--hit", ja);
+      z.classList.toggle("dimmed", !ja);
+      if(ja) treffer++;
+    });
+    var de = treffer === 1 ? " Projekt" : " Projekte";
+    var en = treffer === 1 ? " project" : " projects";
+    text.innerHTML = name + " &middot; " + treffer +
+      '<span class="de" lang="de">' + de + '</span><span class="en" lang="en">' + en + '</span>';
+    leiste.classList.add("on");
+  }
+
+  knopf.addEventListener("click", zuruecksetzen);
+
+  rollen.forEach(function(btn){
+    btn.addEventListener("click", function(e){
+      e.stopPropagation();
+      var offen = btn.getAttribute("aria-expanded") === "true";
+      if(offen){ zuruecksetzen(); return; }
+      menuesZu();
+      btn.setAttribute("aria-expanded", "true");
+      btn.parentElement.querySelector(".role-menu").classList.add("on");
+      filtern(btn.dataset.rolle, btn.textContent.trim());
+    });
+  });
+
+  document.querySelectorAll(".role-menu a").forEach(function(a){
+    a.addEventListener("click", function(e){
+      e.preventDefault();
+      menuesZu();
+      var ziel = document.getElementById(a.getAttribute("href").slice(1));
+      if(ziel) ziel.scrollIntoView({behavior: "smooth", block: "start"});
+    });
+  });
+
+  document.addEventListener("click", function(e){
+    if(!e.target.closest(".role")) menuesZu();
+  });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape") menuesZu();
+  });
+})();
+(function(){
+  var wurzel = document.documentElement;
+  var knoepfe = document.querySelectorAll(".langsw button");
+  function setze(l){
+    wurzel.setAttribute("data-lang", l);
+    wurzel.setAttribute("lang", l);
+    knoepfe.forEach(function(b){
+      b.setAttribute("aria-current", b.dataset.lang === l ? "true" : "false");
+    });
+    try{ localStorage.setItem("sprache", l); }catch(e){}
+  }
+  setze(wurzel.getAttribute("data-lang") || "de");
+  knoepfe.forEach(function(b){
+    b.addEventListener("click", function(){ setze(b.dataset.lang); });
+  });
+})();
+document.querySelectorAll(".snd").forEach(function(btn){
+  btn.addEventListener("click", function(){
+    var v = btn.parentElement.querySelector("video");
+    if(!v) return;
+    var turnOn = v.muted;
+    document.querySelectorAll("video").forEach(function(o){ o.muted = true; });
+    document.querySelectorAll(".snd").forEach(function(b){ b.dataset.on = "0"; });
+    if(turnOn){ v.muted = false; btn.dataset.on = "1"; v.play().catch(function(){}); }
+  });
+});
+</script>
+</body>
+</html>
